@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Hiwoods Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/Reset.css">
+    <link rel="stylesheet" href="../CSS/Topnav.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/Dropdown.css">
+    <link rel="stylesheet" href="../CSS/Home_Welcome.css">
+    <link rel="stylesheet" href="../CSS/Home_Stay.css">
+    <link rel="stylesheet" href="../CSS/Home_Eat_and_Drink.css">
+    <link rel="stylesheet" href="../CSS/Home_Events.css">
+    <link rel="stylesheet" href="../CSS/Home_Amenities.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <link rel="stylesheet" href="../CSS/General_styles.css">
+    <script src="../Javascript/Dropdown.js"></script>
+    <script src="../Javascript/Menu.js"></script>
+    <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="bar_container" onclick="openNav(); disableScrollbar();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="55px" height="55px"
+                style="position: relative; bottom: 5px;"></a>
+        <a href="About_us.html">About us</a>
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink.html">Eat and Drink</a>
+        <a href="Events.html">Events</a>
+        <a href="Amenities.html">Amenities</a>
+        <a href="Location.html">Location</a>
+        <a href="Reviews.html">Reviews</a>
+        <div class="book_container">
+            <button onclick="myFunction()" class="drop">Book</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Stay.html">Stay</a>
+                <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+                <a href="Events_form.html">Events</a>
+                <a href="Amenities_form.html">Amenities</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+            onclick="closeNav(); enableScrollbar();">&times;</a>
+        <div class="header_container">
+            <a href="Home.html" style="right: 6px;">
+                <img src="../Logos/Logo_white.png" width="72px" height="72px">
+                <h1 style="top: 19px; right: 3px;">Home</h1>
+            </a>
+            <a href="About_us.html" style="left: 6px; bottom: 6px;">
+                <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+                <h1 style="top: 11px; left: 9px;">About us</h1>
+            </a>
+            <a href="Stay.html" style="left: 3px;">
+                <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+                <h1 style="top: 10px; left: 8px;">Stay</h1>
+            </a>
+            <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+                <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+                <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+            </a>
+            <a href="Events.html" style="right: 11px; bottom: 2px;">
+                <img src="../Icons/Menu/events.png" width="77px" height="77px">
+                <h1 style="top: 23px; right: 6px;">Events</h1>
+            </a>
+            <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+                <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+                <h1 style="top: 8px; left: 11px;">Amenities</h1>
+            </a>
+            <a href="Location.html" style="left: 4px; bottom: 4px;">
+                <img src="../Icons/Menu/location.png" width="42px" height="42px">
+                <h1 style="top: 7px; left: 11px;">Location</h1>
+            </a>
+            <a href="Reviews.html" style="right: 1px;">
+                <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+                <h1 style="top: 13px;">Reviews</h1>
+            </a>
+        </div>
+    </nav>
+
+    <section class="main_introduction">
+        <div class="main_images">
+            <div><img src="../Images/Home/Swimming_pool.jpg"></div>
+        </div>
+        <div class="main_description">
+            <p class="italicise">Welcome to</p>
+            <br>
+            <h1 style="letter-spacing: 3px;">Hiwoods</h1>
+            <h2>Hotel</h2>
+            <br>
+            <p class="welcome_description">Located on the outskirts of Singapore,
+                we offer an amazing glimpse of Nature's beauty.
+                <br>
+                <br>
+                High-class restaurants, pristine facilities for your workouts,
+                not to mention spaces for weddings and conferences - we have all of them.
+                <br>
+                <br>
+                Pre-book your stay today.
+            </p>
+        </div>
+    </section>
+
+    <section class="stay">
+        <div class="stay_home_left">
+            <div id="box">
+                <div class="corner top left"></div>
+                <div class="content">
+                    <h3>Stay</h3>
+                </div>
+                <div class="corner bottom right"></div>
+            </div>
+            <br>
+            <br>
+            <p style="font-size: 17px; line-height: 1.75;">Enjoy a luxurious stay
+                <br>in the variety of rooms
+                <br>we have to offer.
+            </p>
+            <a class="move_stay teleport" href="Stay.html">Learn more ></a>
+        </div>
+        <div class="stay_home_right">
+            <img src="../Images/Normal_room.jpg">
+        </div>
+    </section>
+
+    <section class="eat_and_drink">
+        <div class="eat_and_drink_top">
+            <hr class="divider">
+            <br>
+            <h3 style="letter-spacing:1px;">Eat and Drink</h3>
+            <br>
+            <a class="teleport" href="Eat_and_Drink.html">View details >
+            </a>
+        </div>
+        <div class="restaurants">
+            <div class="kaiseki restaurant">
+                <img src="../Images/Food/Kaiseki.jpg">
+                <h4>Kaiseki Matsuri</h4>
+                <br>
+                <h6>Japanese cuisine</h6>
+                <h4 style="margin-top: 35px; margin-left: 25px; line-height: 1.5;">
+                    懐<br>
+                    石<br>
+                    祭<br>
+                    り
+                </h4>
+            </div>
+            <div class="italian restaurant">
+                <img src="../Images/Food/Italian.jpg">
+                <h4>
+                    Ristorante<br>
+                    Bello Sapore
+                </h4>
+                <br>
+                <h6>Italian specialties</h6>
+            </div>
+            <div class="western restaurant">
+                <img src="../Images/Food/Western.jpg">
+                <h4>
+                    The<br>
+                    Epicurean<br>
+                    Table
+                </h4>
+                <br>
+                <h6>Western cuisine</h6>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="events_left">
+            <img src="../Images/ballroom.webp">
+        </div>
+        <div class="events_right">
+            <div id="box">
+                <div class="corner top left"></div>
+                <div class="content">
+                    <h3>Events</h3>
+                </div>
+                <div class="corner bottom right"></div>
+            </div>
+            <br>
+            <br>
+            <p style="font-size: 17px; line-height: 1.75;">
+                From business conferences to weddings,<br>
+                we have the perfect room for you.
+            </p>
+            <a class="move_stay teleport" href="Events.html">Learn more ></a>
+        </div>
+    </section>
+
+    <section class="amenities">
+        <div class="amenities_top">
+            <hr class="divider">
+            <h3 style="letter-spacing:1px;">Amenities</h3>
+            <br>
+            <p style="font-size: 17px;">
+                When you book a stay with us,<br>
+                you have free access to the amenities stated below!<br>
+                Due to high demand, please book a time slot before visiting!
+            </p>
+            <br>
+            <a class="teleport" href="Amenities.html">View details ></a>
+        </div>
+        <div class="amenities_bottom">
+            <div>
+                <img src="../Icons/Amenities/wifi.png" width="30px">
+                <h6>Wifi</h6>
+            </div>
+            <div>
+                <img src="../Icons/Amenities/swimming.png" width="33px">
+                <h6>Outdoor pool</h6>
+            </div>
+            <div>
+                <img src="../Icons/Amenities/fitness.png" width="33px">
+                <h6>Fitness center</h6>
+            </div>
+            <div>
+                <img src="../Icons/Amenities/parking.png" width="30px">
+                <h6>Parking</h6>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footer">
+            <div class="hotel_logo">
+                <img src="../Logos/Final_logo_white.png">
+            </div>
+            <div class="hotel_logo_side">
+                <h4>Hiwoods Hotel</h4>
+                <p>1 Coney Avenue, Coney Island, Singapore</p>
+                <p>+65 87403571</p>
+                <p>project_hiwoods@ux.com</p>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>

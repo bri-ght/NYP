@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events - Hiwoods Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/Reset.css">
+    <link rel="stylesheet" href="../CSS/Topnav.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/Dropdown.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <link rel="stylesheet" href="../CSS/General_styles.css">
+    <style>
+        /* Header and Description */
+        .events_header {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 40px;
+            height: auto;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .move_events_header {
+            position: relative;
+            top: 12px;
+        }
+
+        .events_header p {
+            margin-bottom: 15px;
+        }
+
+
+        /* Event rooms and description */
+        .events_rooms {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 70px;
+            width: max-content;
+            height: max-content;
+        }
+
+        .events_rooms img {
+            margin-top: 60px;
+            width: 450px;
+            border-radius: 20px;
+        }
+
+        .room_description {
+            padding-top: 21px;
+            padding-left: 10px;
+            width: 440px;
+        }
+
+        .special {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+
+        .room_description h2 {
+            font-size: 25px;
+        }
+
+        .room_description p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+
+        /* Positions of event rooms */
+        .left {
+            float: left;
+            margin-right: 40px;
+        }
+
+        .right {
+            float: right;
+            margin-left: 40px;
+        }
+
+        /* Shorten distance footer from 'events room' section */
+        footer {
+            top: 200px;
+        }
+
+        @media screen and (max-width: 1020px) {
+            .left {
+                clear: both;
+                margin-right: 0;
+            }
+
+            .right {
+                clear: both;
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .events_rooms {
+                left: 10px;
+            }
+
+            .events_rooms img {
+                width: 350px;
+            }
+
+            .room_description {
+                width: 360px;
+            }
+        }
+    </style>
+    <script src="../Javascript/Dropdown.js"></script>
+    <script src="../Javascript/Menu.js"></script>
+    <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="bar_container" onclick="openNav(); disableScrollbar();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="50px" height="50px"
+                style="position: relative; bottom: 2.5px;"></a>
+        <a href="About_us.html">About us</a>
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink.html">Eat and Drink</a>
+        <a href="Events.html">Events</a>
+        <a href="Amenities.html">Amenities</a>
+        <a href="Location.html">Location</a>
+        <a href="Reviews.html">Reviews</a>
+        <div class="book_container">
+            <button onclick="myFunction()" class="drop">Book</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Stay.html">Stay</a>
+                <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+                <a href="Events_form.html">Events</a>
+                <a href="Amenities_form.html">Amenities</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+            onclick="closeNav(); enableScrollbar();">&times;</a>
+        <div class="header_container">
+            <a href="Home.html" style="right: 6px;">
+                <img src="../Logos/Logo_white.png" width="72px" height="72px">
+                <h1 style="top: 19px; right: 3px;">Home</h1>
+            </a>
+            <a href="About_us.html" style="left: 6px; bottom: 6px;">
+                <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+                <h1 style="top: 11px; left: 9px;">About us</h1>
+            </a>
+            <a href="Stay.html" style="left: 3px;">
+                <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+                <h1 style="top: 10px; left: 8px;">Stay</h1>
+            </a>
+            <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+                <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+                <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+            </a>
+            <a href="Events.html" style="right: 11px; bottom: 2px;">
+                <img src="../Icons/Menu/events.png" width="77px" height="77px">
+                <h1 style="top: 23px; right: 6px;">Events</h1>
+            </a>
+            <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+                <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+                <h1 style="top: 8px; left: 11px;">Amenities</h1>
+            </a>
+            <a href="Location.html" style="left: 4px; bottom: 4px;">
+                <img src="../Icons/Menu/location.png" width="42px" height="42px">
+                <h1 style="top: 7px; left: 11px;">Location</h1>
+            </a>
+            <a href="Reviews.html" style="right: 1px;">
+                <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+                <h1 style="top: 13px;">Reviews</h1>
+            </a>
+        </div>
+    </nav>
+
+    <header class="events_header">
+        <hr class="divider">
+        <div class="move_events_header">
+            <h1 style="letter-spacing:1px;">Events</h1>
+            <br>
+            <p>
+                Hiwoods Hotel offers various event venues for grand celebrations and formal
+                meetings.<br>
+            </p>
+            <p>
+                All meeting and events at Hiwoods Hotel are certified with the<br>
+                <strong>SG Clean</strong> and <strong>SG SafeEvent</strong> mark.<br>
+            </p>
+            <p>
+                These endorse our commitment to high hygiene standards,<br>
+                to ensure that your stay and dining experience is safe.
+            </p>
+            <br>
+            <a class="teleport" href="Events_form.html">Book now ></a>
+        </div>
+        <hr class="divider" style="position: relative; top: 45px;">
+    </header>
+
+    <section class="events_rooms">
+
+        <div class="left">
+            <div>
+                <img src="../Images/Events/Ballroom2.jpg">
+            </div>
+            <div class="room_description">
+                <div id="box">
+                    <div class="corner top left"></div>
+                    <div class="content">
+                        <h2>Dreamy Skies</h2>
+                    </div>
+                    <div class="corner bottom right"></div>
+                </div>
+                <br>
+                <p>
+                    Illuminated by thousands of bulbs,<br>
+                    this ballroom provides an atmosphere of nostalgia.<br>
+                    <br>
+                    Maximum number of people: 210<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div>
+                <img src="../Images/Events/Ballroom.jpg">
+            </div>
+            <div class="room_description">
+                <div id="box">
+                    <div class="corner top left"></div>
+                    <div class="content">
+                        <h2>Flowering Lights</h2>
+                    </div>
+                    <div class="corner bottom right"></div>
+                </div>
+                <br>
+                <p>
+                    With over 50 flowering lights,<br>
+                    this ballroom is filled with magnificent decorations to<br>
+                    give guests the best experience.<br>
+                    <br>
+                    Maximum number of people: 430<br>
+                </p>
+            </div>
+
+        </div>
+
+        <div style="clear: both;" class="left">
+            <div>
+                <img src="../Images/Events/conference_room.jpeg">
+            </div>
+            <div class="room_description">
+                <div id="box">
+                    <div class="corner top left"></div>
+                    <div class="content">
+                        <h2>Wooding Heights</h2>
+                    </div>
+                    <div class="corner bottom right"></div>
+                </div>
+                <br>
+                <p>
+                    Wood-themed conference room. An all-time favourite for smaller meetings.<br>
+                    <br>
+                    Maximum number of people: 12<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div>
+                <img src="../Images/Events/Conference_room2.jpg">
+            </div>
+            <div class="room_description">
+                <div id="box">
+                    <div class="corner top left"></div>
+                    <div class="content">
+                        <h2>Vasty Straits</h2>
+                    </div>
+                    <div class="corner bottom right"></div>
+                </div>
+                <br>
+                <p>
+                    Exquisitely furnished, useful for larger conferences.<br>
+                    <br>
+                    Maximum number of people: 25<br>
+                </p>
+            </div>
+
+    </section>
+
+    <footer>
+        <section class="footer">
+            <div class="hotel_logo">
+                <img src="../Logos/Final_logo_white.png">
+            </div>
+            <div class="hotel_logo_side">
+                <h4>Hiwoods Hotel</h4>
+                <p>1 Coney Avenue, Coney Island, Singapore</p>
+                <p>+65 87403571</p>
+                <p>project_hiwoods@ux.com</p>
+            </div>
+        </section>
+    </footer>
+
+</body>

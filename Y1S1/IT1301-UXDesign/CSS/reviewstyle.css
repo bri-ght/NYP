@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.reviews p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.move_reviews_header {
+    position: relative;
+    top: 12px;
+}
+
+.reviews_header p {
+    margin-bottom: 15px;
+}
+
+
+.review {
+    width: 960px;
+    border-radius: 10px;
+    height: auto;
+    border: none;
+    background-color: whitesmoke;
+    margin: 100px auto;
+    padding: 22px 30px;
+}
+
+@media only screen and (max-width: 1020px) {
+    .review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 69%;
+        margin: 30px auto;
+    }
+
+}

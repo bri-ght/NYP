@@ -1,0 +1,100 @@
+.dining_header {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 40px;
+    height: auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.restaurants {
+    position: relative;
+    top: 30px;
+}
+
+.restaurant {
+    margin: 100px auto;
+    width: 900px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.restaurant img {
+    margin: 20px;
+    width: auto;
+    height: 230px;
+    float: left;
+    border-radius: 15px;
+}
+
+.restaurant h4 {
+    letter-spacing: 1px;
+}
+
+div.restaurant p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.restaurant h4 {
+    font-size: 27px;
+}
+
+.restaurant li {
+    list-style: none;
+    line-height: 1.3;
+}
+
+.restaurant ul {
+    position: relative;
+    top: 10px;
+}
+
+.restaurant h4,
+.restaurant li {
+    text-align: right;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    /* Adjust margins and paddings */
+    .restaurant {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    div.restraunt li {
+        text-align: right;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .restaurant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 69%;
+        margin: 30px auto;
+    }
+
+    .restaurant img {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        width: 85%;
+        display: block;
+        height: auto;
+    }
+
+    div.restaurant a {
+        float: none;
+        height: 40px;
+        font-size: 20px;
+    }
+}

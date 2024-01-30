@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay - Hiwoods Hotel</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/CSSresetfile.css">
+    <link rel="stylesheet" href="../CSS/General_styles.css">
+    <link rel="stylesheet" href="../CSS/Topnav.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/Dropdown.css">
+    <link rel="stylesheet" href="../CSS/formPageDF.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <script src="../Javascript/Menu.js"></script>
+    <script src="../Javascript/Dropdown.js"></script>
+    <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body style="margin: 0;">
+    <nav class="topnav">
+        <div class="bar_container" onclick="openNav(); disableScrollbar();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="55px" height="55px"
+                style="position: relative; bottom: 5px;"></a>
+        <a href="About_us.html">About us</a>
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink.html">Eat and Drink</a>
+        <a href="Events.html">Events</a>
+        <a href="Amenities.html">Amenities</a>
+        <a href="Location.html">Location</a>
+        <a href="Reviews.html">Reviews</a>
+        <div class="book_container">
+            <button onclick="myFunction()" class="drop">Book</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Stay.html">Stay</a>
+                <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+                <a href="Events_form.html">Events</a>
+                <a href="Amenities_form.html">Amenities</a>
+            </div>
+        </div>
+    </nav>
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+            onclick="closeNav(); enableScrollbar();">&times;</a>
+        <div class="header_container">
+            <a href="Home.html" style="right: 6px;">
+                <img src="../Logos/Logo_white.png" width="72px" height="72px">
+                <h1 style="top: 19px; right: 3px;">Home</h1>
+            </a>
+            <a href="About_us.html" style="left: 6px; bottom: 6px;">
+                <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+                <h1 style="top: 11px; left: 9px;">About us</h1>
+            </a>
+            <a href="Stay.html" style="left: 3px;">
+                <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+                <h1 style="top: 10px; left: 8px;">Stay</h1>
+            </a>
+            <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+                <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+                <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+            </a>
+            <a href="Events.html" style="right: 11px; bottom: 2px;">
+                <img src="../Icons/Menu/events.png" width="77px" height="77px">
+                <h1 style="top: 23px; right: 6px;">Events</h1>
+            </a>
+            <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+                <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+                <h1 style="top: 8px; left: 11px;">Amenities</h1>
+            </a>
+            <a href="Location.html" style="left: 4px; bottom: 4px;">
+                <img src="../Icons/Menu/location.png" width="42px" height="42px">
+                <h1 style="top: 7px; left: 11px;">Location</h1>
+            </a>
+            <a href="Reviews.html" style="right: 1px;">
+                <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+                <h1 style="top: 13px;">Reviews</h1>
+            </a>
+        </div>
+    </nav>
+    <aside class="overlay1 left-overlay1">
+        HIWOODS HOTEL © 2023 |
+        WORLD'S LUXURIOUS URBAN HOTEL
+    </aside>
+    <section class="container" id="formIntro">
+        <h1 id="web-title" class="bold">BOOK WITH 4 STEPS</h1>
+        <p id="zzzz">Do use us buttons to navigate back.</p>
+    </section>
+    <section class="container">
+        <section class="box-row">
+            <button class="box selected" id="nav01">1</button>
+            <article class="line" id="line1"></article>
+            <button class="box selected" id="nav02">2</button>
+            <article class="line" id="line2"></article>
+            <button class="box selected" id="nav03">3</button>
+            <article class="line" id="line3"></article>
+            <button class="box selected" id="nav04">4</button>
+        </section>
+    </section>
+    <main class="container2">
+        <section class="box-row1">
+            <article class="box1">Check Availability</article>
+            <article class="line1"></article>
+            <article class="box1">Room Selection</article>
+            <article class="line1"></article>
+            <article class="box1">Complete Details</article>
+            <article class="line1"></article>
+            <article class="box1">Payment Mode</article>
+        </section>
+    </main>
+    <section class="container3" style="position: relative;">
+        <form id="formAll">
+            <section id="input1">
+                <section id="input1main">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                            <style>
+                                svg {
+                                    fill: #daa520
+                                }
+                            </style>
+                            <path
+                                d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z" />
+                        </svg>
+                        Check Availability
+                    </h2>
+                    <h4 class="legend" id="legend">* Mandatory Field | ^ Recommended</h4>
+                    <article id="popupContainer">
+                        <p>Due to high demand, the hotel is fully booked on 4th August 2023. As a result, the check-in
+                            date during this period is currently unavailable. Sorry for any inconvenience caused.
+                        </p>
+                    </article>
+                    <h3 class="remove">Stay-in Dates:</h3>
+                    <article class="form-container">
+                        <div class="form-group" id="checkinContainer">
+                            <label for="checkin">Check-in*</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="form-group" id="checkoutContainer">
+                            <label for="checkout">Check-out*</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                        <div class="form-group" id="nightsContainer">
+                            <input type="text" id="nights" name="nights" readonly>
+                        </div>
+                    </article>
+                    <h3 class="remove">Guest Count:</h3>
+                    <article class="form-container form-containerAlt">
+                        <div class="form-group" id="adultsContainer">
+                            <label for="adults">Adults*</label>
+                            <input type="number" id="adults" name="adults" min="1" max="2" value="1" required>
+                        </div>
+                        <div class="form-group" id="childrenContainer">
+                            <label for="children">Children*</label>
+                            <input type="number" id="children" name="children" min="0" max="" value="0" required>
+                        </div>
+                    </article>
+                    <article class="form-container">
+                        <div class="form-group" id="bedtypeContainer">
+                            <label for="bedtype">Bed Type Preference:</label>
+                            <select id="bedtype" name="bedtype">
+                                <option value="single">Single Bed</option>
+                                <option value="double">Double Bed</option>
+                                <option value="twin">Twin Beds</option>
+                                <option value="king">King Size Bed</option>
+                            </select>
+                        </div>
+                    </article>
+                    <article class="buttonContainer">
+                        <button class="defaultButton0" type="button" id="input1button">CHECK AVAILABILITY</button>
+                    </article>
+                </section>
+                <aside class="aside">
+                    <h3 class="asideTitle">Hotel Information</h3>
+                    <article class="output-group">
+                        <img src="../Images/croppedhotel.jpg">
+                    </article>
+                    <article class="output-group">
+                        <h4>Hiwoods Hotel, a luxurious urban retreat nestled in the heart of Singapore's bustling
+                            cityscape.</h4>
+                    </article>
+                </aside>
+            </section>
+            <section id="input2" style="display:none;">
+                <section id="input2main">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 640 512">
+                            <style>
+                                svg {
+                                    fill: #daa520
+                                }
+                            </style>
+                            <path d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                        </svg>
+                        Room Selection
+                    </h2>
+                    <article id="roomSort">
+                        <h3 id="currencyText">CURRENCY:
+                            <select id="currency" name="currency">
+                                <option value="SGD">Singapore Dollar</option>
+                                <option value="MYR">Malaysian Ringgit</option>
+                                <option value="YUAN">Chinese Yuan</option>
+                                <option value="USD">United States Dollar</option>
+                            </select>
+                        </h3>
+                    </article>
+                    <article class="roomContainer" id="roomContainer">
+                    
+                    </article>
+                    <button class="defaultButton0" type="button" id="input2back">BACK</button>
+                </section>
+                <aside class="aside" id="input2Aside">
+                    <h3 class="asideTitle">Reservation Details</h3>
+                    <article class="output-group">
+                        <h4>Check-in Date:</h4>
+                        <h4 class="checkInOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Check-Out Date:</h4>
+                        <h4 class="checkOutOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Total Nights:</h4>
+                        <h4 class="nightOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Guest Count:</h4>
+                        <h4 class="guestOutput">?? Adults, ?? Children</h4>
+                    </article>
+                </aside>
+            </section>
+            <section id="input3" style="display:none;">
+                <section id="input3main">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 512 512">
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                        </svg>
+                        Complete Details
+                    </h2>
+                    <h3 class="yes">Personal Information</h3>
+                    <h3 class="remove">Given Name</h3>
+                    <article class="form-container">
+                        <div class="form-group" id="titleContainer">
+                            <label for="title">Title: </label>
+                            <select id="title" name="title" required>
+                                <option value="">Title?</option>
+                                <option value="mr">Mr.</option>
+                                <option value="mrs">Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="firstnameContainer">
+                            <label for="first-name">First Name*:</label>
+                            <input type="text" id="first-name" name="first-name" autocomplete="off" required>
+                        </div>
+                        <div class="form-group" id="lastnameContainer">
+                            <label for="last-name">Last Name*:</label>
+                            <input type="text" id="last-name" name="last-name" autocomplete="off" required>
+                        </div>
+                    </article>
+                    <article class="form-container form-containerAlt">
+                        <div class="form-group" id="codeContainer">
+                            <label for="country-code">Country*:</label>
+                            <input type="number" id="country-code" min="1" max="100" name="country-code"
+                                placeholder="01" autocomplete="off" required>
+                        </div>
+                        <div class="form-group" id="phoneContainer">
+                            <label for="telephone-number">Telephone Number*:</label>
+                            <input type="tel" id="telephone-number" name="telephone-number" autocomplete="off" required>
+                        </div>
+                    </article>
+                    <article class="form-container">
+                        <div class="form-group">
+                            <label for="email">Email Address*:</label>
+                            <input type="email" id="email" name="email" placeholder="abcde@abcde.com" autocomplete="off"
+                                required>
+                        </div> 
+                    </article>
+                    <h3 class="yes">Personal Preferences</h3>
+                    <label for="smoking-preference">Smoking Preference</label>
+                    <article class="form-container form-containerAlt">
+                        <div class="form-group0" id="smokingContainer">
+                            <input type="radio" id="smoking" name="smoking-preference" value="smoking">
+                            <label for="smoking" class="smokingLabel">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                                    <path d="M448 32V43c0 38.2 15.2 74.8 42.2 101.8l21 21c21 21 32.8 49.5 32.8 79.2v11c0 17.7-14.3 32-32 32s-32-14.3-32-32V245c0-12.7-5.1-24.9-14.1-33.9l-21-21C405.9 151.1 384 98.1 384 43V32c0-17.7 14.3-32 32-32s32 14.3 32 32zM576 256V245c0-38.2-15.2-74.8-42.2-101.8l-21-21c-21-21-32.8-49.5-32.8-79.2V32c0-17.7 14.3-32 32-32s32 14.3 32 32V43c0 12.7 5.1 24.9 14.1 33.9l21 21c39 39 60.9 91.9 60.9 147.1v11c0 17.7-14.3 32-32 32s-32-14.3-32-32zM0 416c0-35.3 28.7-64 64-64H416c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32H64c-35.3 0-64-28.7-64-64V416zm224 0v32H384V416H224zm288-64c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384c0-17.7 14.3-32 32-32zm96 0c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384c0-17.7 14.3-32 32-32z"/></svg>
+                                Smoking</label>
+                        </div>
+                        <div class="form-group0" id="smokingContainer2">
+                            <input type="radio" id="non-smoking" name="smoking-preference" value="non-smoking">
+                            <label for="non-smoking" class="smokingLabel">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    <path d="M99.5 144.8L178.7 224l96 96 92.5 92.5C335.9 434.9 297.5 448 256 448C150 448 64 362 64 256c0-41.5 13.1-79.9 35.5-111.2zM333.3 288l-32-32H384v32H333.3zm32 32H400c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H269.3L144.8 99.5C176.1 77.1 214.5 64 256 64c106 0 192 86 192 192c0 41.5-13.1 79.9-35.5 111.2L365.3 320zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM272 96c-8.8 0-16 7.2-16 16c0 26.5 21.5 48 48 48h32c8.8 0 16 7.2 16 16s7.2 16 16 16s16-7.2 16-16c0-26.5-21.5-48-48-48H304c-8.8 0-16-7.2-16-16s-7.2-16-16-16zM229.5 320l-96-96H112c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16H229.5z"/></svg>
+                                Non-smoking</label>
+                        </div>
+                    </article>
+                    <h4>Would you require assistance in...<h4>
+                    <article class="form-groupAlt">
+                        <div class="form-group0">
+                            <input type="checkbox" id="hearing-assistance" name="special-preferences" value="hearing-assistance">
+                            <label for="hearing-assistance">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M502.6 54.6l-40 40c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l40-40c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3zm-320 320l-128 128c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3zM240 128c-57.6 0-105.1 43.6-111.3 99.5c-1.9 17.6-17.8 30.2-35.3 28.3s-30.2-17.8-28.3-35.3C74.8 132.5 149.4 64 240 64c97.2 0 176 78.8 176 176c0 46-17.7 87.9-46.6 119.3c-12 13-17.4 24.8-17.4 34.7V400c0 61.9-50.1 112-112 112c-17.7 0-32-14.3-32-32s14.3-32 32-32c26.5 0 48-21.5 48-48v-6.1c0-32.9 17.4-59.6 34.4-78c18.4-20 29.6-46.6 29.6-75.9c0-61.9-50.1-112-112-112zm0 80c-17.7 0-32 14.3-32 32c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-44.2 35.8-80 80-80s80 35.8 80 80c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-17.7-14.3-32-32-32z"/></svg>
+                                Hearing
+                            </label>
+                            <input type="checkbox" id="visual-assistance" name="special-preferences" value="visual-assistance">
+                            <label for="visual-assistance">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                                <path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223 149.5c48.6-44.3 123-50.8 179.3-11.7c60.8 42.4 78.9 123.2 44.2 186.9L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3L223 149.5zm223.1 298L83.1 161.5c-11 14.4-20.5 28.7-28.4 42.2l339 265.7c18.7-5.5 36.2-13 52.6-21.8zM34.5 268.3c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c3.1 0 6.1-.1 9.2-.2L33.1 247.8c-1.8 6.8-1.3 14 1.4 20.5z"/></svg>
+                                Visual
+                            </label>
+                        </div>
+                        <div class="form-group0">
+                            <input type="checkbox" id="mobility-assistance" name="special-preferences" value="mobility-assistance">
+                            <label for="mobility-assistance">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M297.4 9.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0zm-96 144l-34.8 34.8c-12.9 12.9-21.9 29.2-25.8 47.1L116.8 342.9c-1.3 5.9-4.3 11.4-8.6 15.7L9.4 457.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l98.8-98.8c4.3-4.3 9.7-7.3 15.7-8.6l107.6-23.9c17.8-4 34.1-12.9 47.1-25.8l34.7-34.7c0 0 .1-.1 .1-.1s.1-.1 .1-.1l74.6-74.6-45.3-45.3L336 242.7 269.3 176l52.1-52.1L276.1 78.6l-74.7 74.7zM224 221.3L290.7 288l-12.2 12.2c-4.3 4.3-9.7 7.3-15.7 8.6l-76.7 17 17-76.7c1.3-5.9 4.3-11.4 8.6-15.7L224 221.3z"/></svg>
+                                Mobility
+                            </label>
+                            <input type="checkbox" id="wheelchair-preference" name="special-preferences" value="wheelchair-preference">
+                            <label for="wheelchair-preference">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM120.5 247.2c12.4-4.7 18.7-18.5 14-30.9s-18.5-18.7-30.9-14C43.1 225.1 0 283.5 0 352c0 88.4 71.6 160 160 160c61.2 0 114.3-34.3 141.2-84.7c6.2-11.7 1.8-26.2-9.9-32.5s-26.2-1.8-32.5 9.9C240 440 202.8 464 160 464C98.1 464 48 413.9 48 352c0-47.9 30.1-88.8 72.5-104.8zM259.8 176l-1.9-9.7c-4.5-22.3-24-38.3-46.8-38.3c-30.1 0-52.7 27.5-46.8 57l23.1 115.5c6 29.9 32.2 51.4 62.8 51.4h5.1c.4 0 .8 0 1.3 0h94.1c6.7 0 12.6 4.1 15 10.4L402 459.2c6 16.1 23.8 24.6 40.1 19.1l48-16c16.8-5.6 25.8-23.7 20.2-40.5s-23.7-25.8-40.5-20.2l-18.7 6.2-25.5-68c-11.7-31.2-41.6-51.9-74.9-51.9H282.2l-9.6-48H336c17.7 0 32-14.3 32-32s-14.3-32-32-32H259.8z"/></svg>
+                                Wheelchair accessibility
+                            </label>
+                        </div>
+                    </article>
+                    <h4>Would you prefer...<h4>
+                    <article class="form-groupAlt">
+                        <div class="form-group0">
+                            <input type="checkbox" id="low-floor" name="special-preferences" value="low-floor">
+                            <label for="low-floor">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                                Prefer low floor
+                            </label>
+                            <input type="checkbox" id="high-floor" name="special-preferences" value="high-floor">
+                            <label for="high-floor">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+                                Prefer high floor
+                            </label>
+                        </div>
+                    </article>
+                    <article class="buttonContainer">
+                        <button class="defaultButton1" type="button" id="input3button">PROCEED TO CHECKOUT </button>
+                        <button class="defaultButton1" type="button" id="input3back">BACK</button>
+                    </article>
+                </section>
+                <aside class="aside" id="input3Aside">
+                    <h3 class="asideTitle">Reservation Details</h3>
+                    <article class="output-group">
+                        <h4>Check-in Date:</h4>
+                        <h4 class="checkInOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Check-Out Date:</h4>
+                        <h4 class="checkOutOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Total Nights:</h4>
+                        <h4 class="nightOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Guest Count:</h4>
+                        <h4 class="guestOutput">?? Adults, ?? Children</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Chosen Room:</h4>
+                        <h4 class="chosenRoomOutput">??? Room</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Room Rate:</h4>
+                        <h4 class="roomRateOutput">??? SGD</h4>
+                        <h6>*per night</h6>
+                    </article>
+                    <article class="output-group0">
+                        <h4>TOTAL</h4>
+                        <h4 class="totalCostOutput">??? SGD</h4>
+                    </article>
+                </aside>
+            </section>
+            <section id="input4" style="display:none;">
+                <section id="input4main">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 576 512">
+                            <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z" />
+                        </svg>
+                        Payment
+                    </h2>
+                    <article class="form-container">
+                        <div class="form-group" id="card_holder_nameContainer">
+                            <label for="card_holder_name">Cardholder Name*:</label>
+                            <input type="text" id="card_holder_name" name="card_holder_name" autocomplete="off"
+                                required>
+                        </div>
+                    </article>
+                    <article class="form-container">
+                        <div class="form-group" id="card_numberContainer">
+                            <label for="card_number">Card Number*:</label>
+                            <input type="number" id="card_number" name="card_number" placeholder="1234 5678 9012 3456"
+                                autocomplete="off" required>
+                        </div>
+                    </article>
+                    <article class="form-container form-containerAlt">
+                        <div class="form-group" id="expiry_dateContainer">
+                            <label for="expiry_date">Expiry Date*:</label>
+                            <input type="text" maxlength="5" id="expiry_date" name="expiry_date" placeholder="MM/YY"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="form-group" id="cvvContainer">
+                            <label for="cvv">CVV*:</label>
+                            <input type="password" id="cvv" name="cvv" maxlength="4" autocomplete="off" required>
+                        </div>
+                    </article>
+                    <input type="checkbox" id="tandc" name="tandc" value="tandc" required>
+                    <label for="tandc">I hereby accept the Terms and Conditions*</label><br>
+                    <input type="checkbox" id="tandc1" name="tandc1" value="tandc1" required>
+                    <label for="tandc">By ticking this box, I agree that the above information is accurate and consent of its collection and usage.</label>
+                    <article class="buttonContainer">
+                        <button class="defaultButton0" id="input4button">CONFIRM RESERVATION</button>
+                        <button class="defaultButton0" id="input4back">BACK</button>
+                    </article>
+                </section>
+                <aside class="aside" id="input4Aside">
+                    <h3 class="asideTitle">Reservation Details</h3>
+                    <article class="output-group">
+                        <h4>Check-in Date:</h4>
+                        <h4 class="checkInOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Check-Out Date:</h4>
+                        <h4 class="checkOutOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Total Nights:</h4>
+                        <h4 class="nightOutput">??</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Guest Count:</h4>
+                        <h4 class="guestOutput">?? Adults, ?? Children</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Chosen Room:</h4>
+                        <h4 class="chosenRoomOutput">??? Room</h4>
+                    </article>
+                    <article class="output-group">
+                        <h4>Room Rate:</h4>
+                        <h4 class="roomRateOutput">??? SGD</h4>
+                        <h6>*per night</h6>
+                    </article>
+                    <article class="output-group0">
+                        <h4>TOTAL</h4>
+                        <h4 class="totalCostOutput">??? SGD</h4>
+                    </article>
+                </aside>
+            </section>
+        </form>
+    </section>
+    <footer style="top: 0;">
+        <section class="footer" style="margin-top: 0;">
+            <div class="hotel_logo">
+                <img src="../Logos/Final_logo_white.png">
+            </div>
+            <div class="hotel_logo_side" style="position: relative; bottom: 10px;">
+                <h4 style="font-size: 30px; padding-bottom: 15px;">Hiwoods Hotel</h4>
+                <p style="position: relative; bottom: 20px;">1 Coney Avenue, Coney Island, Singapore</p>
+                <p style="position: relative; bottom: 20px;">+65 87403571</p>
+                <p style="position: relative; bottom: 20px;">project_hiwoods@ux.com</p>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src="../Javascript/formPageDF.js"></script>
+
+</html>

@@ -1,0 +1,33 @@
+section.amenities {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 180px;
+    width: max-content;
+    height: auto;
+}
+
+.amenities_top {
+    text-align: center;
+    line-height: 1.5;
+}
+
+div.amenities_bottom {
+    position: relative;
+    top: 25px;
+    left: 26px;
+}
+
+.amenities_bottom div {
+    width: max-content;
+    float: left;
+    margin-right: 40px;
+}
+
+.amenities_bottom h6 {
+    margin-left: 15px;
+    float: right;
+    position: relative;
+    top: 5px;
+}

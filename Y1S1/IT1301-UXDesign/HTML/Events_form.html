@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event Proposal - Hiwoods Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/Reset.css">
+    <link rel="stylesheet" href="../CSS/Topnav.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/Dropdown.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <link rel="stylesheet" href="../CSS/General_styles.css">
+    <style>
+        /* Form header and description */
+        .form_header {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 40px;
+            height: auto;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .move_form_header_body {
+            position: relative;
+            top: 12px;
+        }
+
+        /* Form formatting */
+        form {
+            width: 934px;
+            padding: 40px;
+            padding-left: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #D3D3D3;
+            border-radius: 10px;
+            position: relative;
+            top: 130px;
+            line-height: 1.3;
+        }
+
+        form div {
+            margin-right: 30px;
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        legend {
+            font-size: 22px;
+        }
+
+        select {
+            width: 70px;
+            height: 38px;
+        }
+
+        input {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 35px;
+            font-size: 16px;
+            font-family: verdana, arial, sans-serif;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            resize: none;
+            font-family: verdana, arial, sans-serif;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        select,
+        input,
+        textarea {
+            border: 1px solid #DCDCDC;
+        }
+
+        select:focus,
+        input:focus,
+        textarea:focus {
+            outline: 1px solid #A38A00;
+        }
+
+        input[type="radio"]:focus,
+        input[type="checkbox"]:focus {
+            outline: none;
+        }
+
+        input[type=date] {
+            width: 130px;
+        }
+
+        input[type=submit] {
+            height: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            background-color: #A38A00;
+            padding-left: 45px;
+            padding-right: 45px;
+            margin-bottom: 30px;
+            border-radius: 50px;
+            position: relative;
+            top: 20px;
+        }
+
+        input[type=submit]:hover {
+            color: #A38A00;
+            background-color: white;
+            border: 1px solid #A38A00;
+            transition-duration: 300ms;
+        }
+
+        input[type=submit]:not(:hover) {
+            transition-duration: 300ms;
+        }
+
+        .special:focus {
+            outline: none;
+        }
+
+        /* Positioning of elements */
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .consent {
+            float: right;
+            position: relative;
+            top: 7px;
+            left: 8px;
+        }
+
+        .move_up {
+            position: relative;
+            bottom: 12px;
+            margin-right: 10px;
+        }
+
+        .description_event {
+            position: relative;
+            top: 10px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .event_details {
+            position: relative;
+            top: 30px;
+        }
+
+        .submit_button {
+            clear: both;
+        }
+
+        .name input {
+            width: 370px;
+        }
+
+        .company input {
+            width: 904px;
+        }
+
+        .contact input {
+            width: 400px;
+        }
+
+        .width1 input {
+            width: 387px;
+        }
+
+        .unique {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            left: 5px;
+        }
+
+        /* Spacing between elements and properties*/
+        .spacing1 input {
+            margin-right: 10px;
+        }
+
+        .spacing2 input {
+            margin-right: 50px;
+        }
+
+        .spacing3 input {
+            margin-right: 55px;
+        }
+
+        /* Distance footer from 'events room' section */
+        footer {
+            top: 175px;
+        }
+
+        /* Invalid Input */
+        .invalid-input {
+            background-color: #ffb2b2;
+        }
+
+        /* Sub-navigation */
+        .navigation {
+            font-size: 12px;
+        }
+
+        .navigation a {
+            font-size: 14px;
+        }
+
+        .navigation a:hover {
+            font-size: 15px;
+        }
+
+
+        @media screen and (max-width: 1020px) {
+
+            html,
+            body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .form_header {
+                top: 60px;
+            }
+
+            form {
+                width: max-content;
+                margin: auto;
+                border: 0;
+            }
+
+            .name input,
+            .contact input {
+                width: 85vw;
+            }
+
+            .company input {
+                width: 85vw;
+            }
+
+            .width1 input {
+                width: 85vw;
+            }
+
+            textarea {
+                width: 85vw;
+            }
+
+            .spacing1,
+            .spacing2,
+            .spacing3 {
+                margin-right: 0;
+            }
+
+            .left {
+                clear: both;
+            }
+
+            .special {
+                display: block;
+            }
+
+            .arrange {
+                position: relative;
+                bottom: 31px;
+                left: 26px;
+            }
+
+            .consent {
+                width: 550px;
+            }
+
+            .unique {
+                top: 8px;
+                left: 0;
+                right: 8px;
+            }
+
+            .consent_submit {
+                position: relative;
+                bottom: 10px;
+            }
+
+            footer {
+                top: 100px;
+            }
+
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .form_header {
+                top: 60px;
+            }
+
+            form {
+                padding-left: 35px;
+            }
+
+            .name input,
+            .contact input {
+                width: 83vw;
+            }
+
+            .company input {
+                width: 83vw;
+            }
+
+            .width1 input {
+                width: 83vw;
+            }
+
+            textarea {
+                width: 83vw;
+            }
+
+            .description_event {
+                width: 450px;
+            }
+
+            .consent {
+                width: 400px;
+            }
+        }
+
+        @media screen and (max-width: 465px) {
+            .description_event {
+                width: 360px;
+            }
+
+            .consent {
+                width: 350px;
+            }
+        }
+    </style>
+    <script src="../Javascript/Dropdown.js"></script>
+    <script src="../Javascript/Validators.js"></script>
+    <script src="../Javascript/Generate_inputs_Events.js"></script>
+    <script src="../Javascript/Menu.js"></script>
+    <script src="../Javascript/Scrollbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the references to the date input fields
+            const startDateInput = document.getElementById('Start_Date');
+            const endDateInput = document.getElementById('End_Date');
+
+            // Get the current date and add one day to it
+            const currentDate = new Date();
+            currentDate.setDate(currentDate.getDate() + 14);
+
+            // Convert the date to the format "YYYY-MM-DD"
+            const minDate = currentDate.toISOString().split('T')[0];
+
+            // Set the minimum date for the "Start Date" field to the current date
+            startDateInput.setAttribute('min', minDate);
+
+            // Set the minimum date for the "End Date" field to the current date
+            endDateInput.setAttribute('min', minDate);
+        });
+        function ValidateForm() {
+            const First_Name = document.forms["Event_Proposals"]["First_Name"].id;
+            const Last_Name = document.forms["Event_Proposals"]["Last_Name"].id;
+            const Email = document.forms["Event_Proposals"]["Email"].id;
+            const Contact_Num = document.forms["Event_Proposals"]["Contact_Num"].id;
+            const Event_Type = document.forms["Event_Proposals"]["Event_Type"].id;
+            const Start_Date = document.forms["Event_Proposals"]["Start_Date"].id;
+            const End_Date = document.forms["Event_Proposals"]["End_Date"].id;
+
+            const errors = [];
+
+            errors.push(...Check_Text(First_Name, 'First Name'));
+            errors.push(...Check_Text(Last_Name, 'Last Name'));
+            errors.push(...Check_Email(Email));
+            errors.push(...Check_Contact_Num(Contact_Num));
+            errors.push(...Check_Text(Event_Type, 'Type of Event'));
+            errors.push(...Check_Valid_Date(Start_Date, End_Date));
+
+            if (errors.length > 0) {
+                alert(errors.join('\n'));
+                return false;
+            }
+
+            return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('Event_Proposals');
+            form.addEventListener('submit', SubmitForm);
+
+            function SubmitForm(event) {
+                event.preventDefault();
+
+                if (ValidateForm()) {
+                    SaveFormData();
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('Event_Proposals');
+                form.addEventListener('submit', SubmitForm);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="bar_container" onclick="openNav(); disableScrollbar();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="50px" height="50px"
+                style="position: relative; bottom: 2.5px;"></a>
+        <a href="About_us.html">About us</a>
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink.html">Eat and Drink</a>
+        <a href="Events.html">Events</a>
+        <a href="Amenities.html">Amenities</a>
+        <a href="Location.html">Location</a>
+        <a href="Reviews.html">Reviews</a>
+        <div class="book_container">
+            <button onclick="myFunction()" class="drop">Book</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Stay.html">Stay</a>
+                <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+                <a href="Events_form.html">Events</a>
+                <a href="Amenities_form.html">Amenities</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+            onclick="closeNav(); enableScrollbar();">&times;</a>
+        <div class="header_container">
+            <a href="Home.html" style="right: 6px;">
+                <img src="../Logos/Logo_white.png" width="72px" height="72px">
+                <h1 style="top: 19px; right: 3px;">Home</h1>
+            </a>
+            <a href="About_us.html" style="left: 6px; bottom: 6px;">
+                <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+                <h1 style="top: 11px; left: 9px;">About us</h1>
+            </a>
+            <a href="Stay.html" style="left: 3px;">
+                <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+                <h1 style="top: 10px; left: 8px;">Stay</h1>
+            </a>
+            <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+                <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+                <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+            </a>
+            <a href="Events.html" style="right: 11px; bottom: 2px;">
+                <img src="../Icons/Menu/events.png" width="77px" height="77px">
+                <h1 style="top: 23px; right: 6px;">Events</h1>
+            </a>
+            <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+                <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+                <h1 style="top: 8px; left: 11px;">Amenities</h1>
+            </a>
+            <a href="Location.html" style="left: 4px; bottom: 4px;">
+                <img src="../Icons/Menu/location.png" width="42px" height="42px">
+                <h1 style="top: 7px; left: 11px;">Location</h1>
+            </a>
+            <a href="Reviews.html" style="right: 1px;">
+                <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+                <h1 style="top: 13px;">Reviews</h1>
+            </a>
+        </div>
+    </nav>
+
+    <header class="form_header">
+        <hr class="divider">
+        <div class="move_form_header_body">
+            <h3 style="letter-spacing:1px;">Events - Request for Proposal</h3>
+            <br>
+            <h6>Submit your proposal to our events organiser using the form below.</h6>
+            <br>
+            <p class="navigation"><a href="Events.html" class="teleport">Events</a>&nbsp&nbsp>&nbsp&nbsp<a
+                    href="Events_form.html" class="teleport">Events
+                    - Request
+                    for
+                    Proposal</a></p>
+        </div>
+        <hr class="divider" style="position: relative; top: 40px;">
+    </header>
+
+    <form id="Event_Proposals" name="Event_Proposals" autocomplete="off">
+        <fieldset>
+
+            <legend>Contact Details</legend>
+            <p style="margin-top: 30px; margin-bottom: 30px;">* indicates required fields</p>
+
+            <div class="left">
+                <label for="Title">Title*</label>
+                <br>
+                <br>
+                <select id="Title" name="Title" required>
+                    <option></option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Dr.">Dr.</option>
+                </select>
+            </div>
+
+            <div class="left name spacing1">
+                <label for="First_Name">First Name*</label>
+                <br>
+                <br>
+                <input type="text" id="First_Name" name="First_Name" required>
+            </div>
+
+            <div class="left name">
+                <label for="Last_Name">Last Name*</label>
+                <br>
+                <br>
+                <input type="text" id="Last_Name" name="Last_Name" required>
+            </div>
+
+            <div class="company clear">
+                <label for="Company">Company (if not applicable, type 'N.A.')</label>
+                <br>
+                <br>
+                <input type="text" id="Company" name="Company">
+            </div>
+
+            <div class="left contact spacing2">
+                <label for="Email">E-mail address*</label>
+                <br>
+                <br>
+                <input type="text" id="Email" name="Email" required>
+            </div>
+
+            <div class="left contact">
+                <label for="Contact_Num">Contact number*</label>
+                <br>
+                <br>
+                <input type="tel" id="Contact_Num" name="Contact_Num" required>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="clear event_details">
+
+            <legend>Event Details</legend>
+            <p style="margin-top: 30px; margin-bottom: 30px;">* indicates required fields</p>
+
+            <div class="left width1 spacing3">
+                <label for="Event_Type">Type of Event*</label>
+                <br>
+                <br>
+                <input type="text" id="Event_type" name="Event_Type" required>
+            </div>
+
+            <div class="left width1">
+                <label for="Num_Guests">Number of Guests/Attendees*</label>
+                <br>
+                <br>
+                <input type="number" id="Num_Guests" name="Num_Guests" min="0" required>
+            </div>
+
+            <div class="clear left spacing1">
+                <label for="Start_Date">Start Date*</label>
+                <br>
+                <br>
+                <input type="date" id="Start_Date" name="Start_Date" required>
+            </div>
+
+            <div class="left spacing1">
+                <label for="End_Date">End Date*</label>
+                <br>
+                <br>
+                <input type="date" id="End_Date" name="End_Date" required>
+            </div>
+
+            <div class="left">
+                <label for="Meal_Requirements">Meal Requirements (if applicable)</label>
+                <br>
+                <br>
+                <input class="special" type="checkbox" id="Meal_Requirements" name="Meal_Requirements"
+                    value="Breakfast">
+                <label class="move_up arrange" for="Breakfast">Breakfast</label>
+                <input class="special" type="checkbox" id="Meal_Requirements" name="Meal_Requirements" value="Lunch">
+                <label class="move_up arrange" for="Lunch">Lunch</label>
+                <input class="special" type="checkbox" id="Meal_Requirements" name="Meal_Requirements"
+                    value="Tea_Package">
+                <label class="move_up arrange" for="Tea_Package">Tea package</label>
+                <input class="special" type="checkbox" id="Meal_Requirements" name="Meal_Requirements" value="Dinner">
+                <label class="move_up arrange" for="Dinner">Dinner</label>
+            </div>
+
+            <div class="clear">
+                <label for="Other_Meal_requirements">Other Meal Requirements</label>
+                <br>
+                <br>
+                <textarea id="Other_Meal_Requirements" name="Other_Meal_Requirements"></textarea>
+            </div>
+
+            <div class="clear">
+                <label for="Description">
+                    <p class="description_event">Description of Event (remember to state the type of
+                        event room(s) used)*</p>
+                </label>
+                <br>
+                <br>
+                <textarea id="Description" name="Description" required></textarea>
+            </div>
+
+            <div>
+                <label for="Accomodation_Requirements">Accommodation Requirements</label>
+                <br>
+                <br>
+                <textarea id="Accommodation_Requirements" name="Accommodation_Requirements"></textarea>
+            </div>
+
+            <div>
+                <label for="Others">Other Requirements/Clarifications (if any)</label>
+                <br>
+                <br>
+                <textarea id="Others" name="Others"></textarea>
+            </div>
+
+            <div class="clear">
+                <label for="Contact_Method">I prefer to be contacted by...*</label>
+                <br>
+                <input type="radio" id="Contact_Method" name="Contact_Method" value="Phone" required>
+                <label class="move_up" for="Phone">Phone</label>
+                <input type="radio" id="Contact_Method" name="Contact_Method" value="Email">
+                <label class="move_up" for="Email.">Email</label>
+            </div>
+
+            <div class="left consent_submit">
+                <input class="unique" type="checkbox" id="Consent" name="Consent" value="Agree" required>
+                <p style="text-align: left; line-height: 1.5;" class="consent" for="Consent">
+                    <em>By ticking this box, I agree that the above information is accurate and consent its collection
+                        and usage by the event organiser.*
+                    </em>
+                </p>
+            </div>
+
+            <div class="submit_button"><input class="Submit" type="submit" value="Send"></div>
+
+        </fieldset>
+    </form>
+
+    <footer>
+        <section class="footer">
+            <div class="hotel_logo">
+                <img src="../Logos/Final_logo_white.png">
+            </div>
+            <div class="hotel_logo_side">
+                <h4>Hiwoods Hotel</h4>
+                <p>1 Coney Avenue, Coney Island, Singapore</p>
+                <p>+65 87403571</p>
+                <p>project_hiwoods@ux.com</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

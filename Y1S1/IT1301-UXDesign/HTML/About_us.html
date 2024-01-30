@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About us - Hiwoods Hotel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/CSSresetfile.css">
+  <link rel="stylesheet" href="../CSS/General_styles.css">
+  <link rel="stylesheet" href="../CSS/Topnav.css">
+  <link rel="stylesheet" href="../CSS/Menu.css">
+  <link rel="stylesheet" href="../CSS/Dropdown.css">
+  <link rel="stylesheet" href="../CSS/infoPageDF.css">
+  <link rel="stylesheet" href="../CSS/infoPage2DF.css">
+  <link rel="stylesheet" href="../CSS/Footer.css">
+  <script src="../Javascript/Dropdown.js"></script>
+  <script src="../Javascript/Menu.js"></script>
+  <script src="../Javascript/Scrollbar.js"></script>
+</head>
+<nav class="topnav">
+  <div class="bar_container" onclick="openNav(); disableScrollbar();">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="55px" height="55px"
+      style="position: relative; bottom: 5px;"></a>
+  <a href="About_us.html">About us</a>
+  <a href="Stay.html">Stay</a>
+  <a href="Eat_and_Drink.html">Eat and Drink</a>
+  <a href="Events.html">Events</a>
+  <a href="Amenities.html">Amenities</a>
+  <a href="Location.html">Location</a>
+  <a href="Reviews.html">Reviews</a>
+  <div class="book_container">
+    <button onclick="myFunction()" class="drop">Book</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="Stay.html">Stay</a>
+      <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+      <a href="Events_form.html">Events</a>
+      <a href="Amenities_form.html">Amenities</a>
+    </div>
+  </div>
+</nav>
+<nav id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+    onclick="closeNav(); enableScrollbar();">&times;</a>
+  <div class="header_container">
+    <a href="Home.html" style="right: 6px;">
+      <img src="../Logos/Logo_white.png" width="72px" height="72px">
+      <h1 style="top: 19px; right: 3px;">Home</h1>
+    </a>
+    <a href="About_us.html" style="left: 6px; bottom: 6px;">
+      <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+      <h1 style="top: 11px; left: 9px;">About us</h1>
+    </a>
+    <a href="Stay.html" style="left: 3px;">
+      <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+      <h1 style="top: 10px; left: 8px;">Stay</h1>
+    </a>
+    <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+      <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+      <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+    </a>
+    <a href="Events.html" style="right: 11px; bottom: 2px;">
+      <img src="../Icons/Menu/events.png" width="77px" height="77px">
+      <h1 style="top: 23px; right: 6px;">Events</h1>
+    </a>
+    <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+      <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+      <h1 style="top: 8px; left: 11px;">Amenities</h1>
+    </a>
+    <a href="Location.html" style="left: 4px; bottom: 4px;">
+      <img src="../Icons/Menu/location.png" width="42px" height="42px">
+      <h1 style="top: 7px; left: 11px;">Location</h1>
+    </a>
+    <a href="Reviews.html" style="right: 1px;">
+      <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+      <h1 style="top: 13px;">Reviews</h1>
+    </a>
+  </div>
+</nav>
+
+<section class="imageContainer">
+  <img src="../Images/002.jpg" alt="mainImage">
+  <article id="topHalf">
+    <div id="blob"></div>
+    <div id="blur"></div>
+    <div id="topHalfInner">
+      <div class="animatedList" id="mainHeader">
+        <h4 class="animatedElement">★★★★★</h4>
+        <h3 class="animatedElement">HIWOODS HOTEL</h3>
+        <h2 class="animatedElement">ULTIMATE LUXURIOUS EXPERIENCE</h2>
+        <div class="xd animatedElement">
+          <h1>FUSION OF CELESTIAL BEAUTY AND URBAN LIGHTS</h1>
+        </div>
+        <button id="userRedirect" onhover="fillButton" onclick="smoothScrollTo('bottomHalfInner2', 2500)"
+          class="animatedElement">READ MORE BELOW</button>
+      </div>
+    </div>
+  </article>
+  <article id="bottomHalf">
+    <div id="bottomHalfInner1"></div>
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+  </article>
+</section>
+<section id="bottomHalfInner2">
+  <section class="defaultContainer">
+    <h3 class="animatedElement">HIWOODS HOTEL</h3>
+    <h1 class="animatedElement"> Our Hotel Vision 
+      <i class="fa-solid fa-eye"style="color: #ffffff; font-size: 0.65em;"></i>
+    </h1>
+    <article class="inlineBlock visionDivs">
+      <p class="animatedElement" style="line-height: 1.3;">Our vision is to create an exceptional urban luxury hotel
+        that sets new standards in
+        elegance, sophistication, and personalised service. </p>
+      <p class="animatedElement" style="line-height: 1.3; text-align: justify;">Located in the heart of a vibrant city
+        Singapore, our hotel
+        will embody the perfect
+        blend of modern design, timeless charm, indulgent amenities as well as implementing future architecture with the
+        mixture of nature.</p>
+      <p class="animatedElement" style="line-height: 1.3;">Giving our customers a truely luxurious experience of city
+        and nature, the best of both
+        worlds.</p>
+    </article>
+    <article class="visionDiv">
+      <div class="screen">
+        <div class="screen-image"></div>
+      </div>
+    </article>
+  </section>
+</section>
+<section id="leadersDiv">
+  <section class="defaultContainer">
+    <h3>HIWOODS HOTEL</h3>
+    <h1>Our Leaders
+      <svg xmlns="http://www.w3.org/2000/svg" height="0.65em"
+        viewBox="0 0 320 512">
+        <style>
+          svg {
+            fill: #000000
+          }
+        </style>
+        <path
+          d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152z" />
+      </svg>
+    </h1>
+    <h4>Our leadership comprises a team of experienced individuals dedicated to spearheading the Group’s numerous
+      business efforts.</h4>
+    <section class="gridContainer">
+      <article class="gridItem">
+        <img src="../Images/portrait_01.png" class="pic1">
+        <img src="../Images/portrait_1.png" class="pic2">
+        <div class="desc">
+          <h1>Raj Patel</h1>
+          <h2>Chief Executive Officer</h2>
+          <p>As the CEO of the prestigious hotel, Mr. Raj Patel is a seasoned hospitality industry leader
+            with an exceptional track record. Under his guidance, the hotel has witnessed tremendous growth.</p>
+        </div>
+      </article>
+      <article class="gridItem">
+        <img src="../Images/portrait_04.png" class="pic1">
+        <img src="../Images/portrait_4.png" class="pic2">
+        <div class="desc">
+          <h1>John Smith</h1>
+          <h2>Hotel Director</h2>
+          <p>Mr. John Smith, the esteemed Hotel Director, brings a wealth of experience and expertise to his role.
+            With an unwavering dedication to exceptional service and attention to detail, he ensures that every guest
+            enjoys an unforgettable stay.</p>
+        </div>
+      </article>
+      <article class="gridItem">
+        <img src="../Images/portrait_03.png" class="pic1">
+        <img src="../Images/portrait_3.png" class="pic2">
+        <div class="desc">
+          <h1>Tan Li Yan</h1>
+          <h2>Hotel President</h2>
+          <p>Ms. Tan Li Yan, the esteemed President of the hotel, is a dynamic leader with a passion for
+            hospitality and a commitment to excellence. With an extensive background in hotel management, she spearheads
+            strategic initiatives, driving the hotel's growth and expanding its global reach.</p>
+        </div>
+      </article>
+      <article class="gridItem">
+        <img src="../Images/portrait_02.png" class="pic1">
+        <img src="../Images/portrait_2.png" class="pic2">
+        <div class="desc">
+          <h1>Arya Daise</h1>
+          <h2>Hotel Vice President</h2>
+          <p>Ms. Arya Daise, the accomplished Vice President of the hotel, is a key driver of the organization's
+            success. With her extensive industry knowledge and expertise in operations, she oversees various departments
+            to ensure seamless guest experiences.</p>
+        </div>
+      </article>
+    </section>
+  </section>
+</section>
+<section id="targetPosition2"></section>
+<section id="divToMove">
+  <section id="testim" class="testim">
+    <section class="testim-cover">
+      <section class="wrap">
+        <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+        <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+        <ul id="testim-dots" class="dots">
+          <li class="dot active"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+        </ul>
+        <div id="testim-content" class="cont">
+          <div class="active">
+            <article class="innerDiv">
+              <h3>TESTIMONIES</h3>
+              <h2>Extravagant Oasis in the Heart of Singapore</h2>
+              <p style="line-height: 1.3;">The rooms were pure luxury, with floor-to-ceiling windows offering
+                breathtaking views of the city
+                skyline. The plush bedding and amenities made me feel like royalty, and the modern technology integrated
+                throughout the room added convenience and comfort.</p>
+              <div class="imageDiv">
+                <img src="../Images/portrait_01.png">
+                <div class="inlineBlock innerInnerDiv">
+                  <h5>ZHONG XINA</h5>
+                  <h6>Guest Review</h6>
+                  <br>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div>
+            <article class="innerDiv">
+              <h3>TESTIMONIES</h3>
+              <h2>Truely Luxurious Singapore Experience</h2>
+              <p style="line-height: 1.3;">If you're looking for a trendy and luxurious escape in Singapore, this urban
+                hotel is the perfect
+                choice. The moment I stepped into the lobby, I was captivated by the hotel's modern and chic design. The
+                attention to detail was evident throughout the property, setting the tone for an unforgettable stay.</p>
+              <div class="imageDiv">
+                <img src="../Images/portrait_04.png">
+                <div class="inlineBlock innerInnerDiv">
+                  <h5>JOHHNY TINS</h5>
+                  <h6>Guest Review</h6>
+                  <br>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="active">
+            <article class="innerDiv">
+              <h3>TESTIMONIES</h3>
+              <h2>Unparalleled Elegance and Impeccable Service</h2>
+              <p style="line-height: 1.3;">The hotel's fine dining restaurant was an absolute delight. The talented
+                chefs crafted culinary
+                masterpieces that delighted both the eyes and taste buds. The impeccable service from the waitstaff
+                further enhanced the overall dining experience.</p>
+              <div class="imageDiv">
+                <img src="../Images/portrait_02.png">
+                <div class="inlineBlock innerInnerDiv">
+                  <h5>ZHANG JILAO</h5>
+                  <h6>Guest Review</h6>
+                  <br>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div>
+            <article class="innerDiv">
+              <h3>TESTIMONIES</h3>
+              <h2>A Luxurious Urban Retreat</h2>
+              <p style="line-height: 1.3;">What impressed me the most was the hotel's commitment to sustainability and
+                eco-conscious practices. It
+                was refreshing to see a luxury establishment take steps towards a greener future.</p>
+              <div class="imageDiv">
+                <img src="../Images/portrait_03.png">
+                <div class="inlineBlock innerInnerDiv">
+                  <h5>XUE LIHUA</h5>
+                  <h6>Guest Review</h6>
+                  <br>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div>
+            <article class="innerDiv">
+              <h3>TESTIMONIES</h3>
+              <h2>A Modern Haven of Luxury in Singapore's Urban Jungle</h2>
+              <p style="line-height: 1.3;">Throughout my stay, the staff's professionalism and genuine hospitality made
+                me feel like a VIP. They
+                anticipated my needs and went above and beyond to ensure my stay was exceptional.</p>
+              <div class="imageDiv">
+                <img src="../Images/portrait_04.png">
+                <div class="inlineBlock innerInnerDiv">
+                  <h5>GUANG XIAOMING</h5>
+                  <h6>Guest Review</h6>
+                  <br>
+                </div>
+              </div>
+            </article>
+          </div>
+      </section>
+    </section>
+  </section>
+</section>
+</div>
+<script src="../Javascript/infoPage2DF.js"></script>
+<script src="https://kit.fontawesome.com/287eca0811.js" crossorigin="anonymous"></script>
+<footer style="top: 0;">
+  <section class="footer" style="margin-top: 0;">
+    <div class="hotel_logo">
+      <img src="../Logos/Final_logo_white.png">
+    </div>
+    <div class="hotel_logo_side" style="position: relative; bottom: 10px;">
+      <h4 style="font-size: 30px;">Hiwoods Hotel</h4>
+      <p style="position: relative; bottom: 20px;">1 Coney Avenue, Coney Island, Singapore</p>
+      <p style="position: relative; bottom: 20px;">+65 87403571</p>
+      <p style="position: relative; bottom: 20px;">project_hiwoods@ux.com</p>
+    </div>
+  </section>
+</footer>
+
+</html>

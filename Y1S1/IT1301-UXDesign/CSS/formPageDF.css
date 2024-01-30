@@ -1,0 +1,850 @@
+
+#confirmationPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.output-group h4, .output-group0 h4, #input3main h4{
+    color:black;
+}
+.descBox h4{
+    font-size: 3em;
+    color:black;
+}
+#legend {
+    color: black;
+}
+#web-title{
+    font-size: 2em;
+}
+#zzzz {
+    font-size: 0.7em;
+    letter-spacing: normal;
+    padding-top: 2px;
+}
+.overlay1 {
+    position: fixed;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    white-space: nowrap;
+    color: white;
+}
+.left-overlay1 {
+    left: 5%;
+    top: 85%;
+    padding: 10px;
+    z-index: -1;
+    letter-spacing: -0.05em;
+    font-size: 1.7em;
+    color: white;
+}
+@media(max-width: 1300px) {
+    .overlay1{display:none}
+}
+#popupContainer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    display: none;
+}
+/* user feedback CSS */
+.invalid {
+    background-color: #ffe6e6;
+}
+.defaultButton0:hover {
+    box-shadow: 0 0 0 3px rgb(44, 44, 44);
+}
+.defaultButton1:hover {
+    box-shadow: 0 0 0 3px rgb(44, 44, 44);
+}
+.roomCardButton:hover {
+    box-shadow: 0 0 0 3px rgb(44, 44, 44); 
+}
+/* Default styles for all screen sizes */
+.fade-in {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+html {
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+}
+.container, .container2, .container3 {
+    margin: 0 auto;
+}
+.bold {
+    font-weight: bold;
+    letter-spacing: 0.06em;
+}
+input {
+    border: 1px rgb(177, 173, 173) solid;
+}
+.inlineBlock {
+    display: inline-block;
+}
+.roomImage {
+    padding: 10px;
+}
+@media(max-width: 1023px) {
+    .container, .container2 {
+        display: none;
+    }
+    input, select {
+        border: none;
+        border-bottom: 1px rgb(177, 173, 173) solid;
+    }
+    .buttonContainer {
+        height: auto;
+        overflow: hidden; /* Clear the float to contain the button */
+    }
+    .buttonContainer0 {
+        height: auto;
+        overflow: hidden; /* Clear the float to contain the button */
+        margin-top: 20px;
+    }
+    .defaultButton0 {
+        float: right;
+        margin-top: 1em;
+        padding: 16px 20px;
+        width: 100%;
+        background-color: rgb(44, 44, 44);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 2em;
+        letter-spacing: 0.06em;
+        border: none;
+        cursor: pointer;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    .defaultButton1 {
+        padding: 16px 24px;
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgb(44, 44, 44);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 1em;
+        letter-spacing: 0.06em;
+        border: none;
+        cursor: pointer;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    .roomCardButton {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        background-color: rgb(44, 44, 44);
+        color: white;
+        margin-top: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 2em;
+        font-weight: bold;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    /* default font consistency */
+    h2 {
+        font-size: 5em;
+        text-align: center;
+    }
+    h3 {
+        font-size: 2.9em;
+        text-align: center;
+    }
+    h6 {
+        font-size: 2.9em;
+    }
+    h4 {
+        font-size: 2em;
+    }
+    p, label {
+        font-size: 2.3em;
+    }
+    h5 {
+        font-size: 1.4em;
+    }
+
+
+    .descBox h4 {
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .descBox h2 {
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .descBox p {
+        text-align: center;
+        font-size: 2em;
+    }
+    /* misc */
+    .legend {
+        padding-bottom: 1.4em;
+        text-align: center;
+    }
+    #formIntro {
+        text-align: center;
+        font-size: 2.6em;
+        letter-spacing: 0.15em;
+        padding: 20px;
+    }
+    .box-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 5px;
+    }
+    .box {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #daa520;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #000000;
+        cursor: pointer;
+    }
+    .box:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .line {
+        height: 4px;
+        background-color: black;
+        flex-grow: 1;
+    }
+    .box-row1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 0px;
+    }
+    .box1 {
+        width: 400px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin-right: 9px;
+        margin-left: 10px;
+        color: #000000;
+    }
+    label {
+        margin-bottom: 2px;
+    }
+
+    /* aside div settings */
+    .aside {
+        display: none;
+    }
+    .asideTitle {
+        border-top: 1px rgb(44, 44, 44) solid;
+        border-bottom: 1px rgb(44, 44, 44) solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .output-group0{
+        position: relative;
+        padding-top: 1.4em;
+        padding-bottom: 1.4em;
+        border-top: rgb(44, 44, 44) 1px solid;
+        border-bottom: rgb(44, 44, 44) 1px solid;
+    } 
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.4em;
+    }
+    .form-containerAlt {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.4em;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        margin-right: 2%;
+    }
+    .form-groupAlt{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        margin-right: 2%;
+    }
+    .form-group0 {
+        display: inline-block;
+    }
+    .form-group0 label {
+        font-size: 1em;
+    }
+    #smokingContainer, #smokingContainer2{
+        font-size: 20px;
+    }
+    #smokingContainer, #smokingContainer2{
+        font-size: 20px;
+    }
+    .output-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 14px;
+    }
+    .form-group:last-child { 
+        margin-right: 0;
+    }
+    .totalCostOutput {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+    /* form input divs */
+    #input1, #input2, #input3, #input4 {
+        background-color: rgb(251, 251, 251);
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    #input1 {
+        width: 100%;
+    }
+    #input1main, #input2main, #input3main, #input4main {
+        padding-right: 10px;
+        width: 100%;
+        padding: 2.5%;
+    }
+    #checkin, #checkout, #adults, #children, #nights, #bedtype {
+        font-size: 1.6em;
+        height: 30px;
+        padding: 10px;
+        width: auto;
+    }
+    /* form input 1 settings ( Check Availability )*/
+    #checkinContainer, #checkoutContainer, #nightsContainer, #adultsContainer, #childrenContainer {
+        width: 100%;
+    }
+    #nights{
+        margin-top: 1em;
+        width: auto;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: not-allowed;
+    }
+    .nights:focus {
+        border-color: #f0f0f0;
+    }
+    #bedtypeContainer{
+        width: 100%;
+    }
+    #bedtype {
+        padding: 12px 5px;
+        height: 50px;
+        width: 100%;
+    }
+    /* form input 2 settings ( Room Selection )*/
+    #roomSort {
+        width: 100%;   
+        margin-right: 25px;
+    }
+    #currencyText {
+        font-size: 3em;
+        padding-left: 6px;
+        padding-top: 1.2em;
+        padding-bottom: 0.2em;
+        border-bottom: rgb(44, 44, 44) solid 2px;
+    }
+    .roomContainer {
+        width: 100%;
+        border-bottom: rgb(44, 44, 44) solid 2px;
+    }
+    .box01 {
+        width: 100%;
+        background-color: rgb(251, 251, 251);
+        border-bottom: 2px gray solid;
+    }
+    .gridContainer1 {
+        display: grid;
+        grid-template-rows: 1fr 0fr;
+    }
+    .descBox h4, .descBox h5, .descBox p{
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    .gridContainer2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 10px;
+    }
+    .gridContainer2 .grid-item h2, .gridContainer2 .grid-item p {
+        padding-left: 2%;
+    }
+    .imageBox {
+        width: 100%;
+    }
+    .roomImage {
+        display: block;
+        width: 97.5%;
+    }
+    /* form input 3 settings ( Complete Details )*/
+    #input3main h3 {
+        padding-top: 0.5em;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.4em;
+        border-bottom: solid rgb(44, 44, 44) 2px;
+    }
+    #input3main h4 {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    #firstnameContainer, #lastnameContainer, #titleContainer {
+        width: 100%;
+    }
+    #codeContainer {
+        width: 24%;
+    }
+    #phoneContainer {
+        width: 76%;
+    }
+    #title, #first-name, #last-name, #country-code, #telephone-number, #email{
+        padding: 10px;
+    }
+    #title {
+        width: 100%;
+        height: 55px;
+    }
+    #first-name, #last-name, #country-code, #telephone-number, #email {
+        width: auto;
+    }
+    
+    #smokingContainer, #smokingContainer2{
+        padding-top: 5px;
+        width: 50%;
+    }
+    /* form input 4 settings ( Payment ) */
+    #input4main p{
+        padding-top: 3px;
+        padding-left: 22px;
+    }
+    #input4main h2 {
+        padding-bottom: 12px;
+    }
+    #card_holder_nameContainer, #card_numberContainer{
+        width: 100%;
+    }
+    #expiry_dateContainer, #cvvContainer{
+        width: 50%;
+    }
+    #card_holder_name, #card_number, #expiry_date, #cvv{
+        width: auto;
+    }
+    input { 
+        padding : 20px 15px;
+        font-size: 2em;
+    }
+    #zz {
+        display: none; 
+    }
+}
+
+
+/* Styles for screens with a minimum width of 1024px (desktops/laptops) */
+@media (min-width: 1024px) {
+    #formAll{
+        margin-bottom: 10%;
+    }
+    .remove {
+        display: none;
+    }
+    #input2back, #input3back, #input4back{ 
+        display: none;
+    }
+    #formIntro h1{
+        padding-top: 17px;
+    }
+    #formIntro p{
+        padding-top: 17px;
+    }
+    /* containers */
+    .container {
+        width: 800px;
+        padding-top: 10px;
+    }  
+    .container2 {
+        width: 960px; 
+    }
+    .container3 {
+        width: 1020px;
+        padding-top: 20px;
+    }
+    .buttonContainer {
+        height: auto;
+        overflow: hidden; /* Clear the float to contain the button */
+    }
+
+    .buttonContainer0 {
+        height: auto;
+        overflow: hidden; /* Clear the float to contain the button */
+        margin-top: 20px;
+    }
+    .defaultButton0 {
+        float: right;
+        padding: 16px 20px;
+        width: 300px;
+        background-color: rgb(44, 44, 44);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 1.5em;
+        letter-spacing: 0.06em;
+        border: none;
+        cursor: pointer;
+        margin: 2px;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    .defaultButton1 {
+        float: right;
+        padding: 16px 24px;
+        width: 300px;
+        background-color: rgb(44, 44, 44);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 1em;
+        letter-spacing: 0.06em;
+        border: none;
+        cursor: pointer;
+        margin: 2px;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    .roomCardButton {
+        float: right;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        background-color: rgb(44, 44, 44);
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        cursor: pointer;
+        width: 90%;
+        text-align: center;
+        margin: 2px;
+        border: 1px rgb(251, 251, 251) solid;
+    }
+    /* default font consistency */
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2.6em;
+        padding-bottom: 0.2em;
+    }
+    h4 {
+        font-size: 1.7em;
+    }
+    p, label {
+        font-size: 1.7em;
+    }
+    h5 {
+        font-size: 1.4em;
+    }
+    /* misc */
+    .legend {
+        padding-bottom: 1.4em;
+    }
+    #formIntro {
+        text-align: center;
+        font-size: 2.6em;
+        letter-spacing: 0.15em;
+        padding: 20px;
+    }
+    .box-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 5px;
+    }
+    .box {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #000000;
+        cursor: pointer;
+    }
+    .box:hover {
+        background-color: #daa520;
+        color: #ffffff;
+    }
+    .line {
+        height: 4px;
+        background-color: black;
+        flex-grow: 1;
+    }
+    .box-row1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 0px;
+    }
+    .box1 {
+        width: 25%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        color: #000000;
+    }
+    .selected {
+        background-color: rgba(0, 0, 0, 0.2); /* Transparent overlay */
+        pointer-events: none;
+    }
+    label {
+        margin-bottom: 2px;
+    }
+
+    /* aside div settings */
+    .aside {
+        float: right;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        width: 25%;
+        height: auto;
+        background-color: rgb(252, 252, 252);
+    }
+    .asideTitle {
+        border-top: 1px rgb(44, 44, 44) solid;
+        border-bottom: 1px rgb(44, 44, 44) solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .output-group0{
+        position: relative;
+        padding-top: 1.4em;
+        padding-bottom: 1.4em;
+        border-top: rgb(44, 44, 44) 1px solid;
+        border-bottom: rgb(44, 44, 44) 1px solid;
+    } 
+    .form-container {
+        display: flex;
+        margin-bottom: 1.4em;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.6em;
+    }
+    #smokingContainer, #smokingContainer2 {
+        padding-top: 7px;
+    }
+    .form-group0 {
+        padding-bottom: 4px;
+    }
+    .form-group0 label {
+        font-size: 16px;
+    }
+    .output-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 14px;
+    }
+    .form-group:last-child { 
+        margin-right: 0;
+    }
+    .totalCostOutput {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+    /* form input divs */
+    #input1, #input2, #input3, #input4 {
+        background-color: rgb(251, 251, 251);
+        display: flex;
+        flex-direction: row;
+    }
+    #input1main, #input2main, #input3main, #input4main {
+        padding-right: 10px;
+        width: 65%;
+        padding: 2.5%;
+        padding-right: 5%;
+    }
+    /* form input 1 settings ( Check Availability )*/
+    #checkin, #checkout {
+        padding: 10px;
+        width: 140px;
+        height: 22px;
+    }
+    #nights{
+        margin-top: 19px;
+        padding: 10px;
+        width: 7em;
+        height: 22px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: not-allowed;
+    }
+    .nights:focus {
+        border-color: #f0f0f0;
+    }
+    #adults, #children {
+        padding: 10px;
+        width: 6.5em;
+        height: 22px;
+    }
+    #bedtype {
+        padding: 10px;
+        width: 161px;
+    }
+    /* form input 2 settings ( Room Selection )*/
+    #roomSort {
+        width: 100%;   
+        margin-right: 25px;
+    }
+    #currencyText {
+        font-size: 2em;
+        padding-left: 6px;
+        padding-top: 1.2em;
+        padding-bottom: 0.2em;
+        border-bottom: rgb(44, 44, 44) solid 2px;
+    }
+    .roomContainer {
+        width: 100%;
+        border-bottom: rgb(44, 44, 44) solid 2px;
+    }
+    .box01 {
+        width: 100%;
+        background-color: #fbfbfb;
+        border-bottom: 2px gray solid;
+    }
+    .gridContainer1 {
+        display: grid;
+        grid-template-columns: 0.6fr 1.4fr;
+    }
+    .descBox h4, .descBox h5, .descBox p{
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    .gridContainer2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 10px;
+    }
+    .gridContainer2 .grid-item h2, .gridContainer2 .grid-item p {
+        padding-left: 10px;
+    }
+    .imageBox {
+        width: 95%;
+        padding-right: 10px;
+        border-right: rgb(218, 165, 32) solid 3px;
+    }
+    .roomImage {
+        display: block;
+        width: 95%;
+    }
+    /* form input 3 settings ( Complete Details )*/
+    #input3main h3 {
+        padding-top: 0.5em;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.4em;
+    }
+    .yes {
+        border-bottom: solid rgb(44, 44, 44) 2px;
+    }
+    #input3main h4 {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    #title, #first-name, #last-name, #country-code, #telephone-number, #email{
+        padding: 10px;
+        width: 140px;
+    }
+    #title {
+        width: 80px;
+    }
+    #first-name, #last-name {
+        width: 140px;
+    }
+    #telephone-number{
+        width: 127px;
+    }
+    #country-code {
+        width: 70px;
+    }
+    #email {
+        width: 236px;
+    }
+    /* form input 4 settings ( Payment ) */
+    #input4main p{
+        padding-top: 3px;
+        padding-left: 22px;
+    }
+    #input4main h2 {
+        padding-bottom: 12px;
+    }
+    #card_holder_name, #card_number, #expiry_date, #cvv{
+        padding: 10px;
+        width: 140px;
+    }
+    #card_holder_name {
+        width: 420px;
+    }
+    #card_number {
+        width: 300px;
+    }
+    #expiry_date, #cvv{
+        width: 70px;
+    }
+}
+

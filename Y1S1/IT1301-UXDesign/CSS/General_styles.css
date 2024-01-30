@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    font-family: verdana, arial, sans-serif;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+hr.divider {
+    border-top: 1px solid #A38A00;
+    width: 50px;
+}
+
+p.italicise {
+    font-style: italic;
+}
+
+.teleport {
+    text-decoration: none;
+    color: #D1B000;
+}
+
+.teleport:hover {
+    font-size: 17px;
+    transition-duration: 300ms;
+}
+
+.teleport:not(:hover) {
+    transition-duration: 300ms;
+}
+
+/* Styling of header corner */
+#box {
+    width: max-content;
+    height: max-content;
+    position: relative;
+}
+
+#box>div.corner {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    border-color: #D1B000;
+}
+
+.content {
+    padding: 10px;
+}
+
+.top {
+    top: 0px;
+    border-top-style: solid;
+}
+
+.bottom {
+    bottom: 0px;
+    border-bottom-style: solid;
+}
+
+.left {
+    left: 0px;
+    border-left-style: solid;
+}
+
+.right {
+    right: 0px;
+    border-right-style: solid;
+}

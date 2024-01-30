@@ -1,0 +1,148 @@
+header {
+    margin: 20px auto;
+    text-align: center;
+}
+
+header select {
+    width: 56%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fffcfc;
+    border-bottom: 2px solid #000;
+    margin: 20px;
+}
+
+.form {
+    margin: 25px
+}
+
+.form1 {
+    margin: 20px 0px
+}
+
+.forms input {
+    border: 0;
+    outline: 0;
+    padding: 16px 20px;
+    width: 160px;
+    height: 25px;
+    border-bottom: 2px solid #000;
+}
+
+select {
+    margin-top: 8px;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-bottom: 2px solid #000;
+}
+
+.move_center {
+    width: 800px;
+}
+
+.forms {
+    margin: auto;
+    width: 56%;
+    text-align: center;
+    position: relative;
+}
+
+.personal_details h2 {
+    text-align: center;
+    margin: 40px
+}
+
+.personal_details {
+    margin: 20px auto;
+    text-align: left;
+    width: 43%;
+    position: relative;
+    left: 60px;
+}
+
+.personal_details input {
+    border: 0;
+    outline: 0;
+    padding: 16px 20px;
+    width: 160px;
+    height: 25px;
+    border-bottom: 2px solid #000;
+}
+
+#notification {
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+    width: 50px
+}
+
+
+div.submission {
+    margin: 40px auto;
+    text-align: center;
+    align-items: center;
+}
+
+div.submission input:hover {
+    background-color: #fff;
+    color: #A38A00;
+    border-color: #A38A00;
+    border-style: solid;
+    padding: 10px 22px;
+}
+
+div.submission input {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #A38A00;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+@media only screen and (max-width:1020px) {
+
+    header,
+    div {
+        margin: 28px auto
+    }
+
+    header select {
+        width: 800px;
+    }
+
+    .forms,
+    .personal_details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .forms input,
+    .personal_details input,
+    select {
+        width: 800px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .personal_details {
+        width: 100%;
+        left: 0;
+    }
+
+    .forms input {
+        width: 800px;
+        left: 10%
+    }
+}

@@ -1,0 +1,133 @@
+section.eat_and_drink {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 255px;
+    width: max-content;
+    height: auto;
+}
+
+.eat_and_drink_top {
+    text-align: center;
+}
+
+.restaurants {
+    clear: both;
+}
+
+.restaurant {
+    position: relative;
+    left: 10px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.eat_and_drink img {
+    width: 370px;
+    border-radius: 15px;
+}
+
+.eat_and_drink h4,
+.eat_and_drink h6 {
+    color: white;
+}
+
+.kaiseki h4,
+.kaiseki h6 {
+    position: relative;
+    bottom: 500px;
+    left: 25px;
+}
+
+.italian h4,
+.italian h6 {
+    position: relative;
+    bottom: 140px;
+    left: 10px;
+    text-align: center;
+}
+
+.western h4,
+.western h6 {
+    position: relative;
+    bottom: 500px;
+    right: 20px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1230px) {
+    .eat_and_drink img {
+        width: 300px;
+    }
+
+    .kaiseki h4 {
+        font-size: 25px;
+    }
+
+    .kaiseki h6 {
+        font-size: 13px;
+    }
+
+    .kaiseki h4,
+    .kaiseki h6 {
+        bottom: 420px;
+        left: 15px;
+    }
+
+    .italian h4 {
+        line-height: 1.15;
+        font-size: 26px;
+    }
+
+    .italian h6 {
+        font-size: 15px;
+    }
+
+    .italian h4,
+    .italian h6 {
+        bottom: 115px;
+    }
+
+    .western h4 {
+        font-size: 27px;
+    }
+
+    .western h5 {
+        font-size: 15px;
+    }
+
+    .western h4,
+    .western h6 {
+        position: relative;
+        bottom: 430px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .eat_and_drink img {
+        width: 250px;
+    }
+
+    .kaiseki h4,
+    .kaiseki h6 {
+        bottom: 350px;
+        left: 15px;
+    }
+
+    .italian h4 {
+        bottom: 100px;
+    }
+
+    .italian h6 {
+        bottom: 106px;
+    }
+
+    .western h4,
+    .western h6 {
+        bottom: 360px;
+        right: 11px;
+    }
+}

@@ -1,0 +1,56 @@
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-image: url('../Images/menu_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header_container {
+    position: relative;
+    top: 75px;
+    left: 50px;
+    width: 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header_container h1 {
+    font-size: 26px;
+    margin-left: 15px;
+    float: right;
+    position: relative;
+}
+
+.header_container a {
+    width: max-content;
+    float: left;
+    margin-right: 40px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #F0F0F0;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #D1B000;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 60px;
+}

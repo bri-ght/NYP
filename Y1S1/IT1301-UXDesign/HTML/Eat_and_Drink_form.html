@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset=”utf-8″ />
+<html>
+
+<head>
+    <title>Dining Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Reset.css">
+    <link rel="stylesheet" href="../CSS/General_styles.css">
+    <link rel="stylesheet" href="../CSS/Topnav.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/Dropdown.css">
+    <link rel="stylesheet" href="../CSS/diningformstyle.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <script>
+        var date = new Date()
+        var year = date.getFullYear().toString()
+        var month = (date.getMonth() + 1).toString()
+        if (month < 10) {
+            var month = ('0' + month)
+        }
+        var day = date.getDate().toString()
+        if (day < 10) {
+            var day = ('0' + day)
+        }
+        var finaldate = year + '-' + month + '-' + day
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('Eat_and_Drink_form');
+            form.addEventListener('submit', SubmitForm);
+
+            function SubmitForm(event) {
+                event.preventDefault();
+
+                SaveFormData();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('Eat_and_Drink_form');
+                form.addEventListener('submit', SubmitForm);
+            });
+        });
+    </script>
+    <script src="../Javascript/Generate_inputs_dining.js"></script>
+    <script src="../Javascript/Dropdown.js"></script>
+    <script src="../Javascript/Menu.js"></script>
+    <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="bar_container" onclick="openNav(); disableScrollbar();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="50px" height="50px"
+                style="position: relative; bottom: 2.5px;"></a>
+        <a href="About_us.html">About us</a>
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink.html">Eat and Drink</a>
+        <a href="Events.html">Events</a>
+        <a href="Amenities.html">Amenities</a>
+        <a href="Location.html">Location</a>
+        <a href="Reviews.html">Reviews</a>
+        <div class="book_container">
+            <button onclick="myFunction()" class="drop">Book</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Stay.html">Stay</a>
+                <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+                <a href="Events_form.html">Events</a>
+                <a href="Amenities_form.html">Amenities</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+            onclick="closeNav(); enableScrollbar();">&times;</a>
+        <div class="header_container">
+            <a href="Home.html" style="right: 6px;">
+                <img src="../Logos/Logo_white.png" width="72px" height="72px">
+                <h1 style="top: 19px; right: 3px;">Home</h1>
+            </a>
+            <a href="About_us.html" style="left: 6px; bottom: 6px;">
+                <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+                <h1 style="top: 11px; left: 9px;">About us</h1>
+            </a>
+            <a href="Stay.html" style="left: 3px;">
+                <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+                <h1 style="top: 10px; left: 8px;">Stay</h1>
+            </a>
+            <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+                <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+                <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+            </a>
+            <a href="Events.html" style="right: 11px; bottom: 2px;">
+                <img src="../Icons/Menu/events.png" width="77px" height="77px">
+                <h1 style="top: 23px; right: 6px;">Events</h1>
+            </a>
+            <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+                <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+                <h1 style="top: 8px; left: 11px;">Amenities</h1>
+            </a>
+            <a href="Location.html" style="left: 4px; bottom: 4px;">
+                <img src="../Icons/Menu/location.png" width="42px" height="42px">
+                <h1 style="top: 7px; left: 11px;">Location</h1>
+            </a>
+            <a href="Reviews.html" style="right: 1px;">
+                <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+                <h1 style="top: 13px;">Reviews</h1>
+            </a>
+        </div>
+    </nav>
+
+    <header>
+        <br><br>
+        <h2>Reservation Booking</h2>
+        <br><br>
+        <h3>Booking Details</h3>
+    </header>
+    <br><br>
+    <form id="Eat_and_Drink_form">
+        <div class="forms">
+            <label>Select a Venue</label>
+            <br>
+            <select id="reservation[restaurant]" name="reservation[restaurant]" class="move_center" required>
+                <option value="The Epicurean Table">The Epicurean Table</option>
+                <option value="Kaiseki Matsuri">Kaiseki Matsuri</option>
+                <option value="Ristorante Bello Sapore">Ristorante Bello Sapore</option>
+            </select>
+            <select class="form" id="reservation[adult]" name="reservation[adult]" required>
+                <option value="">Adult</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <select class="form" id="reservation[baby]" name="reservation[baby]" required>
+                <option value="">Baby (0-5 years old)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <select class="form" id="reservation[children]" name="reservation[Children]" required>
+                <option value="">Children (5-12 years old)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <input class="form" type="text" onfocus="(this.type='date')" id="reservation[date]" name="reservation[date]"
+                value="--Select Date--" required>
+            <script>
+                document.getElementById("reservation[date]").setAttribute("min", finaldate)
+            </script>
+            <select class="form" id="reservation[time]" name="reservation[time]" required>
+                <option value="">--Select Time--</option>
+                <option value="7:00 AM">7:00 AM</option>
+                <option value="7:30 AM">7:30 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="8:30 AM">8:30 AM</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="9:30 AM">9:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="1:30 PM">1:30 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="2:30 PM">2:30 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="3:30 PM">3:30 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="4:30 PM">4:30 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="5:30 PM">5:30 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="6:30 PM">6:30 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="7:30 PM">7:30 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="8:30 PM">8:30 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+            </select>
+        </div>
+        <br><br>
+        <header>
+            <h3>Personal Details</h3>
+        </header>
+        <div class="personal_details">
+            <label class="form1" for="name">Name</label>
+            <input class="form1" type="text" id="firstname" name="firstname" value="First Name" placeholder="First Name"
+                autocomplete="off" required />
+            <input class="form1" type="text" id="lastname" name="lastname" value="Last Name" placeholder="Last Name"
+                autocomplete="off" required />
+            <br>
+            <label class="form1" for="mobile phone">Mobile Phone</label>
+            <input class="form1" type="tel" id='telephone' name="telephone" placeholder="87654321" pattern="[0-9]{8}"
+                autocomplete="off" required />
+            <label class="form1" for="notification">Notify Me Via Text Message</label>
+            <input class="form1" type="checkbox" id="notification" name="notification" value="notification" /><br>
+            <label class="form1" for="email">Email</label>
+            <input class="form1" type="email" id="email" name="email" placeholder="Email" autocomplete="off" required />
+        </div>
+        <div class="submission">
+            <input form="Eat_and_Drink_form" id="submission" type="submit" value="SUBMIT">
+        </div>
+    </form>
+    <footer style="top: 50px;">
+        <section class="footer">
+            <div class="hotel_logo">
+                <img src="../Logos/Final_logo_white.png">
+            </div>
+            <div class="hotel_logo_side">
+                <h4>Hiwoods Hotel</h4>
+                <p>1 Coney Avenue, Coney Island, Singapore</p>
+                <p>+65 87403571</p>
+                <p>project_hiwoods@ux.com</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

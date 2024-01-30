@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facility Booking - Hiwoods Hotel</title>
+  <link rel="stylesheet" href="../CSS/Reset.css">
+  <link rel="stylesheet" href="../CSS/General_styles.css">
+  <link rel="stylesheet" href="../CSS/Topnav.css">
+  <link rel="stylesheet" href="../CSS/Menu.css">
+  <link rel="stylesheet" href="../CSS/Dropdown.css">
+  <link rel="stylesheet" href="../CSS/Footer.css">
+  <link rel="stylesheet" href="../CSS/Amenities_form.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the references to the date input fields
+      const startDateInput = document.getElementById('Date');
+
+      // Get the current date and add one day to it
+      const currentDate = new Date();
+      currentDate.setDate(currentDate.getDate() + 1);
+
+      // Convert the date to the format "YYYY-MM-DD"
+      const minDate = currentDate.toISOString().split('T')[0];
+
+      // Set the minimum date for the "Start Date" field to the current date
+      startDateInput.setAttribute('min', minDate);
+    });
+  </script>
+  <script src="../Javascript/Dropdown.js"></script>
+  <script src="../Javascript/Menu.js"></script>
+  <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body>
+  <!--Nav-->
+  <nav class="topnav">
+    <div class="bar_container" onclick="openNav(); disableScrollbar();">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="50px" height="50px"
+        style="position: relative; bottom: 2.5px;"></a>
+    <a href="About_us.html">About us</a>
+    <a href="Stay.html">Stay</a>
+    <a href="Eat_and_Drink.html">Eat and Drink</a>
+    <a href="Events.html">Events</a>
+    <a href="Amenities.html">Amenities</a>
+    <a href="Location.html">Location</a>
+    <a href="Reviews.html">Reviews</a>
+    <div class="book_container">
+      <button onclick="myFunction()" class="drop">Book</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+        <a href="Events_form.html">Events</a>
+        <a href="Amenities_form.html">Amenities</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+      onclick="closeNav(); enableScrollbar();">&times;</a>
+    <div class="header_container">
+      <a href="Home.html" style="right: 6px;">
+        <img src="../Logos/Logo_white.png" width="72px" height="72px">
+        <h1 style="top: 19px; right: 3px;">Home</h1>
+      </a>
+      <a href="About_us.html" style="left: 6px; bottom: 6px;">
+        <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+        <h1 style="top: 11px; left: 9px;">About us</h1>
+      </a>
+      <a href="Stay.html" style="left: 3px;">
+        <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+        <h1 style="top: 10px; left: 8px;">Stay</h1>
+      </a>
+      <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+        <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+        <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+      </a>
+      <a href="Events.html" style="right: 11px; bottom: 2px;">
+        <img src="../Icons/Menu/events.png" width="77px" height="77px">
+        <h1 style="top: 23px; right: 6px;">Events</h1>
+      </a>
+      <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+        <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+        <h1 style="top: 8px; left: 11px;">Amenities</h1>
+      </a>
+      <a href="Location.html" style="left: 4px; bottom: 4px;">
+        <img src="../Icons/Menu/location.png" width="42px" height="42px">
+        <h1 style="top: 7px; left: 11px;">Location</h1>
+      </a>
+      <a href="Reviews.html" style="right: 1px;">
+        <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+        <h1 style="top: 13px;">Reviews</h1>
+      </a>
+    </div>
+  </nav>
+  <!--Form-->
+  <header class="move_header">
+    <header class="header">
+      <hr class="divider">
+      <div class="move_header1">
+        <h2 style="letter-spacing:1px;">Facility Booking</h2>
+        <br>
+        <p class="navigation"><a href="Amenities.html" class="teleport">Amenities</a>&nbsp&nbsp>&nbsp&nbsp<a
+            href="Amenities_form.html" class="teleport">Facility Booking</a></p>
+      </div>
+      </div>
+      <hr class="divider" style="position: relative; top: 45px;">
+    </header>
+
+    <div class="form-container">
+      <form id="booking-form">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" class="form-input" autocomplete="off" required>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" class="form-input" autocomplete="off" required>
+
+        <label for="Facility">Facility:</label>
+        <select id="Facility" name="Facility" required>
+          <option value="Gym">Gym</option>
+          <option value="Swimming Pool">Swimming Pool</option>
+        </select>
+
+        <label for="Date">Date:</label>
+        <input type="date" id="Date" name="Date" required>
+
+        <label for="Time">Time Slot:</label>
+        <select id="Time_Slot" name="Time" required>
+          <option value="1200-1400">1200-1400</option>
+          <option value="1400-1600">1400-1600</option>
+          <option value="1600-1800">1600-1800</option>
+          <option value="1800-2000">1800-2000</option>
+          <option value="20000-2200">2000-2200</option>
+        </select>
+
+        <label for="Message">Message:</label>
+        <textarea id="Message" name="Message" rows="4" class="form-input"></textarea>
+        <input type="submit" value="Submit" class="submit-button">
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the references to the date input fields
+        const DateInput = document.getElementById('Date');
+
+        // Get the current date and add one day to it
+        const currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 1);
+
+        // Convert the date to the format "YYYY-MM-DD"
+        const minDate = currentDate.toISOString().split('T')[0];
+
+        // Set the minimum date for the "Date" field to the current date
+        DateInput.setAttribute('min', minDate);
+      });
+
+      function handleFormSubmit(event) {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Convert form data to text
+        let textData = "";
+        const form = event.target;
+        const formData = new FormData(form);
+        for (const [key, value] of formData.entries()) {
+          textData += key + ": " + value + "\n";
+        }
+
+        // Create a download link for the form data
+        const link = document.createElement("a");
+        link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(textData);
+        link.download = "Facility_Booking.txt";
+        link.style.display = "none";
+        document.body.appendChild(link);
+
+        // Trigger the download
+        link.click();
+
+        // Redirect to the success page
+        window.location.href = "file:///C:/Data/Winston/NYP/UX%20Design/Project%20Hiwoods/HTML/Booking_successful.html";
+      }
+
+      var form = document.getElementById("booking-form");
+      form.addEventListener("submit", handleFormSubmit);
+    </script>
+
+
+    <!--Footer-->
+    <footer>
+      <section class="footer">
+        <div class="hotel_logo">
+          <img src="../Logos/Logo_white.png">
+        </div>
+        <div class="hotel_logo_side">
+          <h4>Hiwoods Hotel</h4>
+          <p>1 Coney Avenue, Coney Island, Singapore</p>
+          <p>+65 87403571</p>
+          <p>project_hiwoods@ux.com</p>
+        </div>
+      </section>
+    </footer>
+</body>
+
+</html>

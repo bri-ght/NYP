@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/Reset.css">
+  <link rel="stylesheet" href="../CSS/General_styles.css">
+  <link rel="stylesheet" href="../CSS/Topnav.css">
+  <link rel="stylesheet" href="../CSS/Menu.css">
+  <link rel="stylesheet" href="../CSS/Dropdown.css">
+  <link rel="stylesheet" href="../CSS/Location-Style.css">
+  <link rel="stylesheet" href="../CSS/Footer.css">
+  <title>Location - Hiwoods Hotel</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <script src="../Javascript/Dropdown.js"></script>
+  <script src="../Javascript/Menu.js"></script>
+  <script src="../Javascript/Scrollbar.js"></script>
+</head>
+
+<body>
+  <!--Navigation-->
+  <nav class="topnav">
+    <div class="bar_container" onclick="openNav(); disableScrollbar();">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <a href="Home.html" class="logo"><img src="../Logos/Logo_white.png" width="50px" height="50px"
+        style="position: relative; bottom: 2.5px;"></a>
+    <a href="About_us.html">About us</a>
+    <a href="Stay.html">Stay</a>
+    <a href="Eat_and_Drink.html">Eat and Drink</a>
+    <a href="Events.html">Events</a>
+    <a href="Amenities.html">Amenities</a>
+    <a href="Location.html">Location</a>
+    <a href="Reviews.html">Reviews</a>
+    <div class="book_container">
+      <button onclick="myFunction()" class="drop">Book</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Stay.html">Stay</a>
+        <a href="Eat_and_Drink_form.html">Eat and Drink</a>
+        <a href="Events_form.html">Events</a>
+        <a href="Amenities_form.html">Amenities</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" style="font-size: 50px;"
+      onclick="closeNav(); enableScrollbar();">&times;</a>
+    <div class="header_container">
+      <a href="Home.html" style="right: 6px;">
+        <img src="../Logos/Logo_white.png" width="72px" height="72px">
+        <h1 style="top: 19px; right: 3px;">Home</h1>
+      </a>
+      <a href="About_us.html" style="left: 6px; bottom: 6px;">
+        <img src="../Icons/Menu/about_us.png" width="47px" height="47px;">
+        <h1 style="top: 11px; left: 9px;">About us</h1>
+      </a>
+      <a href="Stay.html" style="left: 3px;">
+        <img src="../Icons/Menu/stay.png" width="51px" height="51px">
+        <h1 style="top: 10px; left: 8px;">Stay</h1>
+      </a>
+      <a href="Eat_and_Drink.html" style="left: 4px; top: 3px;">
+        <img src="../Icons/Menu/eat_and_drink.png" width="46px" height="46px">
+        <h1 style="top: 8px; left: 10px;">Eat and Drink</h1>
+      </a>
+      <a href="Events.html" style="right: 11px; bottom: 2px;">
+        <img src="../Icons/Menu/events.png" width="77px" height="77px">
+        <h1 style="top: 23px; right: 6px;">Events</h1>
+      </a>
+      <a href="Amenities.html" style="left: 3px; bottom: 10px;">
+        <img src="../Icons/Menu/amenities.png" width="45px" height="45px">
+        <h1 style="top: 8px; left: 11px;">Amenities</h1>
+      </a>
+      <a href="Location.html" style="left: 4px; bottom: 4px;">
+        <img src="../Icons/Menu/location.png" width="42px" height="42px">
+        <h1 style="top: 7px; left: 11px;">Location</h1>
+      </a>
+      <a href="Reviews.html" style="right: 1px;">
+        <img src="../Icons/Menu/reviews.png" width="57px" height="57px">
+        <h1 style="top: 13px;">Reviews</h1>
+      </a>
+    </div>
+  </nav>
+  <!--Location-->
+  <h1 style="text-align:center;">Location</h1>
+  <br>
+  <iframe id="map" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.671050267541!2d-73.985941!3d40.574926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24f2675555555%3A0x1d6ce990f8c64aa4!2sConey%20Island!5e0!3m2!1sen!2sus!4v1638532225550!5m2!1sen!2sus"
+    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <div class="cards-container">
+    <div class="card2">
+      <h2 style="text-align:center;">Parking</h2>
+      <br>
+      <p>Parking:Complimentary for guests</p>
+      <br>
+      <p>Costs: 7am-6pm: $3 for 1st hr; $1.50 for sub</p>
+      <p>½ hr Aft 6pm: $6 per entry</p>
+      <br>
+      <p>Valet Parking: Currently Not available</p>
+    </div>
+    <div class="card2">
+      <h2>What's Nearby</h2>
+      <br>
+      <p>New York Aquarium: Opening hours from 8am-10pm</p>
+      <br>
+      <p>Luna Park: Opening hours from 9am-9pm</p>
+      <br>
+      <p>Coney Island Beach</p>
+    </div>
+    <div class="card2">
+      <h2>Transportation</h2>
+      <br>
+      <p>Shutter bus: Unavailable</p>
+      <p>Taxi service: Unavailable</p>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer style="top:50px;">
+    <section class="footer">
+      <div class="hotel_logo">
+        <img src="../Logos/Final_logo_white.png">
+      </div>
+      <div class="hotel_logo_side">
+        <h4>Hiwoods Hotel</h4>
+        <p>1 Coney Avenue, Coney Island, Singapore</p>
+        <p>+65 87403571</p>
+        <p>project_hiwoods@ux.com</p>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

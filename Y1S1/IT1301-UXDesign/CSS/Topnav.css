@@ -1,0 +1,87 @@
+.topnav {
+    width: auto;
+    height: 70px;
+    background-color: rgb(18, 26, 33);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0 7px 3px rgb(229, 228, 226);
+}
+
+.topnav a {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-top: 26px;
+    margin-bottom: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.topnav a.logo {
+    float: left;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.topnav a:hover {
+    color: #D1B000;
+    transition-duration: 300ms;
+}
+
+.topnav a:not(:hover) {
+    transition-duration: 300ms;
+}
+
+.topnav a.book {
+    float: right;
+    font-size: large;
+    padding: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 70px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    background-color: #007FFF;
+    border-radius: 50px;
+}
+
+.topnav a.book:hover {
+    color: #FFFFFF;
+    background-color: #0466c9;
+}
+
+.bar_container {
+    float: left;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-left: 38px;
+    margin-right: 12px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 24px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 1020px) {
+    .topnav a:not(:first-child):not(:nth-child(2)):not(:last-child) {
+        display: none;
+    }
+
+    #myDropdown a {
+        display: block;
+    }
+
+    .bar_container {
+        margin-left: 16px;
+    }
+
+}

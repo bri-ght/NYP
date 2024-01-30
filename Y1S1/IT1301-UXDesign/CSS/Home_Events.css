@@ -1,0 +1,49 @@
+section.events {
+    clear: both;
+    position: relative;
+    top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    height: auto;
+}
+
+.events_left {
+    float: left;
+}
+
+.events_left img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.events_right {
+    float: right;
+    padding-left: 40px;
+    padding-top: 55px;
+}
+
+.move {
+    position: relative;
+    right: 100px;
+}
+
+@media screen and (max-width: 1230px) {
+    section.events {
+        position: relative;
+        top: 110px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .events_left img {
+        width: 480px;
+        border-radius: 20px;
+    }
+
+    .events_right {
+        position: relative;
+        bottom: 20px;
+        right: 5px;
+    }
+}
